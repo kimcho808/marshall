@@ -1,0 +1,145 @@
+/* index.css */
+/* --------------------------- 상단 고정바 */
+header {
+    display:flex; justify-content:center; 
+    background:var(--main-color);
+    width: 100%;
+    position:fixed; left:0;
+}
+header .content {
+    display:flex; justify-content:space-between;
+    align-items:center;
+    width:1560px;
+    padding:14px 0;
+}
+header .content .logo {width:140px;}
+header .content .logo a {}
+header .content .logo a img {width:100%;}
+/* 네비 */
+header .content nav {}
+header .content nav .main_nav {
+    display:flex;
+    gap:24px;
+}
+header .content nav .main_nav > li {
+    position: relative; width:max-content; height:max-content;
+}
+header .content nav .main_nav > li > a {
+    display:block;
+    text-align:center;
+    font-size:var(--nav-content);
+}
+header .content nav .main_nav li a {color:var(--font-color);}
+header .content nav .main_nav > li > ul {
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
+    padding:18px;
+    gap:22px;
+    width:max-content;
+    background:rgba(0, 0, 0, 0.86);
+    position: absolute;
+    top: 130%;
+    left:50%;
+    transform:translateX(-50%);
+    display:none;
+}
+header .content nav .main_nav > li > a:hover {color:var(--point-color);}
+header .content nav .main_nav > li:hover ul {display:flex;}
+/* 오른쪽 */
+header .content .nav_right {
+    display:flex; justify-content:center; align-items:center;
+    gap:12px;
+}
+header .content .nav_right * {color:var(--font-color);}
+header .content .nav_right > a {display:block; width:24px;}
+header .content .nav_right > a img {width:100%;}
+header .content .nav_right .Language_btn {position:relative;}
+header .content .nav_right .Language_btn .Language {
+    display:flex; gap:4;
+    justify-content:center; align-items:center;
+}
+header .content .nav_right .Language_btn .Language_sub {
+    display:flex; flex-flow:column nowrap;
+    background:rgba(0, 0, 0, 0.86);
+    justify-content:center; align-items:center;
+    padding:18px; gap:22px;
+    position:absolute;
+    top: 130%;
+    left:50%;
+    transform:translateX(-50%);
+    display:none;
+}
+header .content .nav_right .Language_btn .Language_sub li {}
+header .content .nav_right .Language_btn .Language_sub li a {}
+/* -------------------------------------------------------------------------- js로 클릭 이벤트 바꾸기 */
+header .content .nav_right .Language_btn:hover .Language_sub {display:flex;}
+/* -------------------------------------------------------- 행 시작 */
+/* --------------- 히어로 */
+main {}
+main iframe {width:100%; height:100vh;}
+/* -------------------------------------------- 2행 */
+main .marshall_contents {
+    display:flex;
+    justify-content:center;
+    background:var(--main-color); padding:120px 0;
+}
+main .marshall_contents .content {
+    max-width:var(--content-width);
+}
+main .marshall_contents .content h2 {
+    color:var(--font-color);
+    font-size:var(--title-l);
+    text-align:center;
+    font-family:'Baskervville';
+    margin-bottom:80px;
+}
+main .marshall_contents .content .summary_g {
+    display:flex; justify-content:space-between;
+    gap:30px;
+}
+main .marshall_contents .content .summary_g div {
+    width:500px; height:618px;
+    display:flex; flex-flow:column nowrap;
+    justify-content:flex-end; align-items:center;
+    position: relative;
+    padding:40px 0; gap:32px;
+}
+main .marshall_contents .content .summary_g div::after {
+    content:''; position:absolute; bottom:0; left:0;
+    display:block; width:100%; height:100%; z-index:70;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+main .marshall_contents .content .summary_g .rock_sound {background-image:url(../images/rock_sound.png);}
+main .marshall_contents .content .summary_g .heritage {background-image:url(../images/heritage.png);}
+main .marshall_contents .content .summary_g .free_power {background-image:url(../images/free_power.png);}
+main .marshall_contents .content .summary_g div * {
+    color:var(--font-color);
+    position:relative; z-index:80;
+}
+main .marshall_contents .content .summary_g h3 {
+    display:flex; flex-flow:column nowrap; justify-content:center; align-items: center;
+}
+main .marshall_contents .content .summary_g div > h3 {
+    font-size:var(--title-m);
+    line-height:1.4em;
+    font-weight:500;
+}
+main .marshall_contents .content .summary_g div > h3 > em {
+    font-size:var(--nav-content);
+    line-height:1.4em;
+    font-weight:300;
+}
+main .marshall_contents .content .summary_g div .sound_summary {
+    text-align:center;
+    line-height:1.6em;
+    display:none;
+}
+main .marshall_contents .content .summary_g div .arrow {width:42px;}
+main .marshall_contents .content .summary_g div .arrow img {width:100%;}
+/* ------------------------------------ 2행 마우스 호버 */
+main .marshall_contents .content .summary_g div:hover .sound_summary {display:block;}
+main .marshall_contents .content .summary_g div:hover .arrow {display:none;}
+main .marshall_contents .content .summary_g div:hover::after {background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 80%);}
+main .marshall_contents .content .summary_g div:hover {justify-content:center;}

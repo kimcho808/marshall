@@ -1,0 +1,14 @@
+:root {
+    /* font_size */
+    --title-l:2.125rem;
+    --nav-content:1.125rem;
+    --title-m:1.375rem;
+
+    /* color */
+    --main-color:#121212;
+    --point-color:#FFC452;
+    --font-color:#cccccc;
+
+    /* width */
+    --content-width:1560px;
+}
