@@ -1,4 +1,10 @@
 /* index.css */
+/* 
+    * GitHub Repository Phishing Alert Appeal & Project Verification
+    이 페이지는 깃허브에서 발생한 피싱 경고 오탐지(False Positive)를 해명하고, 해당 코드가 순수한 학습 및 포트폴리오용임을 증명하기 위해 작성되었습니다.
+    This CSS is part of a student project. 
+    Any resemblance to real-world commercial sites is purely for design practice.
+*/
 /* --------------------------- 상단 고정바 */
 header {
     display:flex; justify-content:center; 
@@ -160,7 +166,7 @@ main .best_item .content .title_nav_more .best_nav .active {color:var(--point-co
 main .best_item .content .title_nav_more .more_btn {position:absolute; top:130%; left:0;}
 /* best swiper */
 main .best_item .best_swiper {width:100%;}
-main .best_item .best_swiper .swiper-wrapper {justify-content:center;}
+main .best_item .best_swiper .swiper-wrapper {}
 main .best_item .best_swiper .swiper-wrapper .swiper-slide {width:max-content;}
 main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g  {position: relative; z-index:70;}
 main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g:hover .cart {display:block;}
@@ -196,10 +202,53 @@ main .best_item .best_next {
     width:26px;
     top:80%;
 }
-main .content .title_nav_more .swiper_btn .best_prev {
+main .best_item .content .title_nav_more .swiper_btn .best_prev {
     background-image:url(../images/prev.svg);
     left:94%;
 }
-main .content .title_nav_more .swiper_btn .best_prev svg {display:none;}
-main .content .title_nav_more .swiper_btn .best_next svg {display:none;}
-main .content .title_nav_more .swiper_btn .best_next {background-image:url(../images/next.svg);}
+main .best_item .content .title_nav_more .swiper_btn .best_prev svg {display:none;}
+main .best_item .content .title_nav_more .swiper_btn .best_next svg {display:none;}
+main .best_item .content .title_nav_more .swiper_btn .best_next {background-image:url(../images/next.svg);}
+/* -------------------------------------------- 4행 */
+main .room_item {
+    padding:120px 0; gap:60px;
+    background:var(--main-color);
+    display:flex; justify-content:center;
+    flex-flow:column nowrap; align-items:center;
+}
+main .room_item .title_img {
+    background-image:url(../images/room_back.png); width:100%; height:405px;
+    background-position:center;
+    background-size:cover;
+}
+main .room_item .title_img .more {color:var(--font-color); font-size:var(--sub-font);}
+main .room_item .title_img .more img {width:12px;}
+main .room_item .content {
+    width:var(--content-width);
+}
+main .room_item .content .room_swiper {}
+main .room_item .content .room_swiper .swiper-wrapper {}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide {}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g {position: relative; z-index:70;}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g:hover .cart {display:block;}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g:hover .find {display:flex;}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap {}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product_img {
+    width:368px; height:340px;
+    margin-bottom:12px;
+}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product_img img {width:100%;}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .title_price {
+    display:flex; justify-content:space-between;
+}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .title_price * {color:var(--font-color);}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .cart {
+    position:absolute; z-index:80; top:4%; right: 4%; display:none;
+}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .cart img {}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .find {
+    position:absolute; z-index:80; bottom:7%; left:5%;
+    color:var(--point-color); font-size:var(--sub-font); font-weight:300;
+    display:flex; align-items:center; gap:4px; display:none;
+}
+main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .find img {}
