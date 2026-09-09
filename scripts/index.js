@@ -57,7 +57,6 @@ for(let i=0; i<6; i++){
                 </div>
             </a>
             <button type="button" class="cart"><img src="./images/shopping.svg" alt="장바구니 담기"></button>
-            <a href="#" class="find">판매처 찾기 <img src="./images/img_arrow.svg" alt=""></a>
         </div>
     `
 
@@ -67,4 +66,28 @@ for(let i=0; i<6; i++){
 const room_swiper = new Swiper(roomSwiper,{
     slidesPerView: 4,
     spaceBetween:29,
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
 })
+
+// outdoors
+const outdoorsList = document.querySelector('.outdoors_list');
+// console.log(outdoorsList);
+
+for(let i=0; i<8; i++){
+    const outdoorsLi = document.createElement('li');
+
+    outdoorsLi.innerHTML = `
+        <a href="">
+            <p class="product_img"><img src="${outdoorsdb[i].product}" alt=""></p>
+            <div class="title_price">
+                <h3>${outdoorsdb[i].title}</h3>
+                <p class="price">${outdoorsdb[i].price}</p>
+            </div>
+        </a>
+        <button type="button" class="cart"><img src="./images/shopping.svg" alt="장바구니 담기"></button>
+    `
+
+    outdoorsList.appendChild(outdoorsLi);
+}

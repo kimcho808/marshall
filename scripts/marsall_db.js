@@ -90,3 +90,54 @@ const roomdb = [
         price:'₩ 470,000',
     },
 ]
+
+const outdoorsdb = [
+    {
+        id: 1,
+        product: './images/headphone_1.png',
+        title:'MONITOR III A.N.C.',
+        price:'₩ 489,000',
+    },
+    {
+        id: 2,
+        product: './images/earphones_1.png',
+        title:'MINOR IV',
+        price:'₩ 169,000',
+    },
+    {
+        id: 3,
+        product: './images/earphones_2.png',
+        title:'MOTIF II A.N.C.',
+        price:'₩ 269,000',
+    },
+    {
+        id: 4,
+        product: './images/speaker_1.png',
+        title:'STANMORE IV',
+        price:'₩ 299,000',
+    },
+    {
+        id: 5,
+        product: './images/headphone_2.png',
+        title:'MILTON A.N.C.',
+        price:'₩ 299,000',
+    },
+    {
+        id: 6,
+        product: './images/headphone_3.png',
+        title:'MAJOR V',
+        price:'₩ 190,000',
+    },
+    {
+        id: 7,
+        product: './images/s_speaker_2.png',
+        title:'EMBERTON III',
+        price:'₩ 289,000',
+    },
+    {
+        id: 8,
+        product: './images/s_speaker_3.png',
+        title:'WILLEN II',
+        price:'₩ 179,000',
+    },
+]
