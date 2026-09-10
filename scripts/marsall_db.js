@@ -141,3 +141,26 @@ const outdoorsdb = [
         price:'₩ 179,000',
     },
 ]
+
+const guidedb = [
+    {
+        id: 1,
+        guideImg:'./images/guide1.png',
+        title:'공간에 맞는 마샬 고르는 법',
+    },
+    {
+        id: 2,
+        guideImg:'./images/guide2.png',
+        title:'당신의 공간을 무대로 만드는 사운드',
+    },
+    {
+        id: 3,
+        guideImg:'./images/guide3.png',
+        title:'기타 톤 만드는 법',
+    },
+    {
+        id: 4,
+        guideImg:'./images/guide4.png',
+        title:'어디서나 함께하는 포터블 라이프',
+    },
+]

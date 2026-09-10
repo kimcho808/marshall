@@ -320,7 +320,7 @@ main .history .content .title .history_content {font-size:var(--nav-content);}
 main .history .content .title .history_content br {display:none;}
 /* 마샬 레코드, 드럼 */
 /* 마샬 레코드 */
-#wrap main .marshall_g {}
+#wrap main .marshall_g {width:max-content; display:flex;}
 #wrap main .marshall_g li * {color:var(--font-color-record);}
 #wrap main .marshall_g li > * {border-radius:10px;}
 #wrap main .marshall_g > li {
@@ -381,3 +381,37 @@ main .history .content .title .history_content br {display:none;}
 }
 /* 나탈 드럼 */
 #wrap main .marshall_g li .drums {background: #343434;}
+/* -------------------------------------------- 7행 */
+#wrap main .guide {background:var(--main-color);}
+#wrap main .guide .content {padding:120px 30px;}
+#wrap main .guide .content .title_swiper_btn {
+    width:var(--content-width); margin-bottom:40px;
+}
+#wrap main .guide .content .title_swiper_btn h2 {
+    color:var(--font-color);
+    font-size:var(--title-l);
+    font-family:'Baskervville';
+}
+#wrap main .guide .content .title_swiper_btn .swiper_btn {}
+#wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev,
+#wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next {
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    width:26px;
+    top:80%;
+}
+#wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev {background-image:url(../images/prev.svg);}
+#wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev svg {display:none;}
+#wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next {background-image:url(../images/next.svg);}
+#wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next svg {display:none;}
+/* swiper */
+#wrap main .guide .content .guide_swiper {}
+#wrap main .guide .content .guide_swiper .swiper-wrapper {}
+#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide {}
+#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g {}
+#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {
+    margin-bottom:12px;
+}
+#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img img {}
+#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g h3 {color:var(--font-color);}

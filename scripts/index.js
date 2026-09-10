@@ -29,7 +29,7 @@ for(let i=0; i<10; i++){
 }
 
 const best_swiper = new Swiper(bestSwiper,{
-    slidesPerView: 4.5,
+    slidesPerView: 'auto',
     spaceBetween:80,
     loop: true,
     centeredSlides: true,
@@ -111,14 +111,52 @@ cart.forEach((cart) => {
 });
 
 // 6행 이벤트
-const marshallItems = document.querySelectorAll('.marshall_g li');
+const record = document.querySelectorAll('.marshall_g [class ^= record]');
+const drums = document.querySelectorAll('.marshall_g [class ^= drums]');
+// console.log(record,drums);
 
-marshallItems.forEach(item => {
-    item.addEventListener('click',()=>{
-        marshallItems.forEach(el => {
-            el.classList.remove('active');
-        });
+for(let d of drums) {d.style.display='none';}
+for(let r of drums) {r.style.display='none';}
+record[0].style.display = 'none';
+drums[0].style.display = 'flex';
 
-        this.classList.add('active');
-    });
-});
+drums[0].addEventListener('click',()=>{
+    record[0].style.display = 'flex';
+    record[1].style.display = 'none';
+    drums[0].style.display = 'none';
+    drums[1].style.display = 'flex';
+})
+record[0].addEventListener('click',()=>{
+    record[0].style.display = 'none';
+    record[1].style.display = 'flex';
+    drums[0].style.display = 'flex';
+    drums[1].style.display = 'none';
+})
+
+// 7행 swiper
+const guide_swiper = document.querySelector('.guide_swiper');
+// console.log(guide_swiper);
+
+for(let i=0; i<4; i++){
+    const guideSlide = document.createElement('div');
+    guideSlide.classList.add('swiper-slide');
+
+    guideSlide.innerHTML = `
+        <div class="swiper-slide">
+            <a href="#" class="guide_g">
+                <p class="guide_img"><img src="${guidedb[i].guideImg}" alt=""></p>
+                <h3>${guidedb[i].title}</h3>
+            </a>
+        </div>`
+
+    guide_swiper.children[0].appendChild(guideSlide);
+}
+
+const guideSwiper = new Swiper(guide_swiper,{
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation:{
+        prevEl:'.guide_prev',
+        nextEl:'.guide_next',
+    },
+})
