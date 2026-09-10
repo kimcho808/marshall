@@ -5,11 +5,13 @@
     --title-m:1.375rem;
     --sub-font:0.875rem;
     --s-find:0.75rem;
+    --title_mx:1.875rem;
 
     /* color */
     --main-color:#121212;
     --point-color:#FFC452;
     --font-color:#cccccc;
+    --font-color-record:#cdcdcd;
 
     /* width */
     --content-width:1560px;

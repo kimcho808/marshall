@@ -91,3 +91,34 @@ for(let i=0; i<8; i++){
 
     outdoorsList.appendChild(outdoorsLi);
 }
+
+// 카트 클릭 이벤트
+const cart = document.querySelectorAll('.cart');
+
+cart.forEach((cart) => {
+    cart.addEventListener('click', () => {
+        const cartImg = cart.querySelector('img');
+        
+        // 만약 현재 이미지가 켜진(cart_on)
+        if (cartImg.src.includes('cart_on.svg')) {
+            // 다시 원래 아이콘으로 되돌리기
+            cartImg.src = './images/shopping.svg';
+        } else {
+            // 아니면 켜진 아이콘으로 바꾸기
+            cartImg.src = './images/cart_on.svg';
+        }
+    });
+});
+
+// 6행 이벤트
+const marshallItems = document.querySelectorAll('.marshall_g li');
+
+marshallItems.forEach(item => {
+    item.addEventListener('click',()=>{
+        marshallItems.forEach(el => {
+            el.classList.remove('active');
+        });
+
+        this.classList.add('active');
+    });
+});

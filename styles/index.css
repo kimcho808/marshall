@@ -6,6 +6,7 @@
     Any resemblance to real-world commercial sites is purely for design practice.
 */
 /* --------------------------- 상단 고정바 */
+#wrap {max-width:1920px; min-width:var(--content-width); margin:auto 0;}
 header {
     display:flex; justify-content:center; 
     background:var(--main-color);
@@ -171,20 +172,21 @@ main .best_item .content .title_nav_more .best_nav {display:flex; gap:18px;}
 main .best_item .content .title_nav_more .best_nav .active {color:var(--point-color);}
 main .best_item .content .title_nav_more .more_btn {position:absolute; top:130%; left:0;}
 /* best swiper */
-main .best_item .best_swiper {width:100%; padding-bottom:5px;}
+main .best_item .best_swiper {width:100%; height:530px; padding-bottom:5px;}
 main .best_item .best_swiper .swiper-wrapper {}
 main .best_item .best_swiper .swiper-wrapper .swiper-slide {width:max-content;}
 main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g  {position: relative; z-index:70;}
 main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g:hover .cart {display:block;}
 main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g:hover .find {display:flex;}
 main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap  {}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide.swiper-slide-active .product_g .product_wrap .product {width:530px; height:500px; border-radius:24px 0 0 0;}
 main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product {
     width:374px; height:345px;
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
     margin-bottom:10px;
-    border-radius:18px 0 0 0;
+    border-radius:18px 0 0 0; transition: all 0.4s ease;
 }
 main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap h3 {
     text-align:center; color:var(--font-color);
@@ -316,3 +318,66 @@ main .history .content .title h2 {
 }
 main .history .content .title .history_content {font-size:var(--nav-content);}
 main .history .content .title .history_content br {display:none;}
+/* 마샬 레코드, 드럼 */
+/* 마샬 레코드 */
+#wrap main .marshall_g {}
+#wrap main .marshall_g li * {color:var(--font-color-record);}
+#wrap main .marshall_g li > * {border-radius:10px;}
+#wrap main .marshall_g > li {
+    display:flex; height:645px;
+} 
+#wrap main .marshall_g li .record {background: #343434;} 
+#wrap main .marshall_g li .record h3 {} 
+#wrap main .marshall_g li .record h3 img {} 
+#wrap main .marshall_g li .record .content_arrow {} 
+#wrap main .marshall_g li .record .content_arrow .content {} 
+#wrap main .marshall_g li .record .content_arrow p:nth-child(2) {} 
+#wrap main .marshall_g li .record .content_arrow p:nth-child(2) img {} 
+/* -------------------------- 공통 */
+#wrap main .marshall_g li .record .back_img {
+    position:absolute; z-index: 1; left:0; top:0;
+    object-fit: cover; top:30%;
+    animation: backSpin 20s linear infinite;
+}
+#wrap main .marshall_g li .drums .back_img {
+    position:absolute; z-index: 1; left:0; top:0;
+    object-fit: cover; top:33%;
+    animation: backSpin 20s linear infinite;
+}
+#wrap main .marshall_g li .record,
+#wrap main .marshall_g li .drums {
+    position: relative; overflow:hidden;
+    padding:80px 0; display:flex; flex-flow:column nowrap; justify-content:space-between; align-items:center;
+}
+#wrap main .marshall_g li .record::after,
+#wrap main .marshall_g li .drums::after {
+    content:''; display:block; position:absolute; left:0; top:0; width:100%; height:100%; z-index: 5;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(197, 160, 89, 0.8) 120%);
+}
+#wrap main .marshall_g li p:nth-child(1) {text-align:center; line-height:1.4em;}
+#wrap main .marshall_g li > h3 {position:relative; z-index: 10;}
+#wrap main .marshall_g li .content_arrow {
+    display:flex; flex-flow:column nowrap; gap:18px; align-items:center;
+    position:relative; z-index: 10;
+}
+#wrap main .marshall_g li .plus {} 
+#wrap main .marshall_g li [class*="none"] h3 {
+    writing-mode: vertical-rl;
+    font-size:var(--title_mx);
+}
+#wrap main .marshall_g [class*="none"] {
+    width:152px; background:#242424; padding:50px 0; gap:16px;
+    display:flex; flex-flow:column nowrap; align-items:center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(197, 160, 89, 0.8) 300%);
+}
+#wrap main .marshall_g li .drums,
+#wrap main .marshall_g li .record {
+    width:1408px;
+    background-repeat:no-repeat; background-size:cover; background-position:center -20%;
+}
+@keyframes backSpin {
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+/* 나탈 드럼 */
+#wrap main .marshall_g li .drums {background: #343434;}
