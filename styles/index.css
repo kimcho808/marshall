@@ -125,7 +125,8 @@ main .marshall_contents .content .summary_g div * {
 }
 main .marshall_contents .content .summary_g h3 {
     display:flex; flex-flow:column nowrap; justify-content:center; align-items: center;
-    position:absolute; top:449px; left:151.5px; transition: all 0.5s ease;
+    position:absolute; top:449px; left:151.5px; 
+    transition: top 0.4s ease 0.2s, transform 0.4s ease 0.2s;
 }
 main .marshall_contents .content .summary_g h3 br {display:none;}
 main .marshall_contents .content .summary_g div > h3 {
@@ -146,7 +147,8 @@ main .marshall_contents .content .summary_g div .sound_summary {
     top: 60%; width:100%;
     left: 50%;
     transform: translate(-50%, 0);
-    opacity:0; transition: all 0.6s ease;
+    opacity:0;
+    transition: opacity 0.3s ease, top 0.4s ease, transform 0.3s ease;
 }
 main .marshall_contents .content .summary_g div .arrow {width:42px; position:absolute; left:229px; bottom:40px;}
 main .marshall_contents .content .summary_g div .arrow img {width:100%;}
@@ -155,10 +157,12 @@ main .marshall_contents .content .summary_g div:hover .sound_summary {
     opacity:1;
     top: 50%; width:100%;
     transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease 0.2s, top 0.4s ease 0.2s, transform 0.4s ease;
 }
 main .marshall_contents .content .summary_g div:hover h3 {
-    top: 32%; /* 제목도 위로 자연스럽게 올라감 */
+    top: 32%;
     transform: translateY(-50%);
+    transition: top 0.4s ease, transform 0.4s ease;
 }
 main .marshall_contents .content .summary_g div:hover .arrow {display:none;}
 main .marshall_contents .content .summary_g div:hover::after {background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 80%);}
