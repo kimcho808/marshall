@@ -81,7 +81,7 @@ header .content .nav_right .Language_btn .Language_sub {
 header .content .nav_right .Language_btn .Language_sub li {}
 header .content .nav_right .Language_btn .Language_sub li a {}
 /* -------------------------------------------------------------------------- js로 클릭 이벤트 바꾸기 */
-header .content .nav_right .Language_btn:hover .Language_sub {display:flex;}
+/* header .content .nav_right .Language_btn:hover .Language_sub {display:flex;} */
 /* -------------------------------------------------------- 행 시작 */
 /* --------------- 히어로 */
 main {}
@@ -181,52 +181,14 @@ main .best_item .content .title_nav_more .best_nav {display:flex; gap:18px;}
 main .best_item .content .title_nav_more .best_nav .active {color:var(--point-color);}
 main .best_item .content .title_nav_more .more_btn {position:absolute; top:130%; left:0;}
 /* best swiper */
-main .best_item .best_swiper {width:100%; height:530px; padding-bottom:5px;}
+main .best_item .best_swiper {background:aqua; width:1920px;}
 main .best_item .best_swiper .swiper-wrapper {}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide {width:max-content; transform:translateY(80px);}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g  {position: relative; z-index:70;}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g:hover .cart {display:block;}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g:hover .find {display:flex;}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap  {}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide.swiper-slide-active {transform:translateY(0);}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide.swiper-slide-active .product_g .product_wrap .product {width:530px; height:500px; border-radius:24px 0 0 0;}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product {
-    width:374px; height:345px;
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    margin-bottom:10px;
-    border-radius:18px 0 0 0; transition: all 0.4s ease;
-}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap h3 {
-    text-align:center; color:var(--font-color);
-    font-size:var(--nav-content);
-}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .cart {
-    position:absolute; z-index:80; top:4%; right: 4%; display:none;
-}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .cart img {width:24px;}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .find {
-    position:absolute; z-index:80; bottom:12%; left:5%; font-size:var(--s-find);
-    color:var(--point-color); font-size:var(--sub-font); font-weight:300;
-    display:flex; align-items:center; gap:4px; display:none;
-}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .find img {}
-main .best_item .best_prev,
-main .best_item .best_next {
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
-    width:26px;
-    top:80%;
-}
-main .best_item .content .title_nav_more .swiper_btn .best_prev {
-    background-image:url(../images/prev.svg);
-    left:94%;
-}
-main .best_item .content .title_nav_more .swiper_btn .best_prev svg {display:none;}
-main .best_item .content .title_nav_more .swiper_btn .best_next svg {display:none;}
-main .best_item .content .title_nav_more .swiper_btn .best_next {background-image:url(../images/next.svg);}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide {background:pink; width:20%;}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide-active {width:30%;}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g {}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap {}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product_img {}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product_img img {width:100%;}
 /* -------------------------------------------- 4행 */
 main .room_item {
     padding:120px 0; gap:60px;
@@ -379,6 +341,7 @@ main .history .content .title .history_content br {display:none;}
     width:152px; background:#242424; padding:50px 0; gap:16px;
     display:flex; flex-flow:column nowrap; align-items:center; overflow: hidden;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(197, 160, 89, 0.8) 300%);
+    cursor:pointer;
 }
 #wrap main .marshall_g li .drums,
 #wrap main .marshall_g li .record {

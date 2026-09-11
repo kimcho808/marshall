@@ -17,7 +17,7 @@ for(let i=0; i<10; i++){
     bestSlide.innerHTML = `
         <div class="product_g">
             <a href="#" class="product_wrap">
-                <p class="product" style="background-image: url(${bestdb[i].product});"></p>
+                <p class="product_img"><img src="${bestdb[i].product}" alt=""></img></p>
                 <h3>${bestdb[i].title}</h3>
             </a>
             <button type="button" class="cart"><img src="./images/shopping.svg" alt="장바구니 담기"></button>
@@ -28,17 +28,25 @@ for(let i=0; i<10; i++){
     bestSwiper.children[0].appendChild(bestSlide);
 }
 
+// const best_swiper = new Swiper(bestSwiper,{
+//     //slidesPerView: 'auto',
+//     slidesPerView: 5,
+//     spaceBetween:30,
+//     loop: true,
+//     centeredSlides: true,
+//     // centeredSlidesBounds: true,
+//     navigation:{
+//         prevEl:'.best_prev',
+//         nextEl:'.best_next',
+// 	},
+// }); // 플러그인 연결
+
 const best_swiper = new Swiper(bestSwiper,{
     slidesPerView: 'auto',
-    spaceBetween:80,
-    loop: true,
+    spaceBetween:30,
     centeredSlides: true,
-    centeredSlidesBounds: true,
-    navigation:{
-        prevEl:'.best_prev',
-        nextEl:'.best_next',
-	},
-}); // 플러그인 연결
+    loop: true,
+})
 
 // room swiper
 const roomSwiper = document.querySelector('.room_swiper');

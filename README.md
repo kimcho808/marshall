@@ -34,5 +34,6 @@
 * 가로로 펼쳐지는 동작을 넣고 싶으면 기존에 솜겨져 있는 것을 display = 'none'이 아닌 `width ='0'`으로 숨겨 두고 `for~of`에서 숨긴 것을 `transition - 'width 0.5s'`이렇게 바꾸기
 * 클릭 이벤트에 flex로 한것은 커지는 가로 넓이를 정확이 적어두기 `width:150px`
 # 09.10
+* 6행 none 태그에 `cursor:pointer;` 추가
 ## swiper에서 loop를 걸지 않고 버튼 비활성화 막는 방법
 * 버튼 태그에 `opacity: 1;`를 넣어 투명해 지는 것을 방지하기
