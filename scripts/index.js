@@ -33,6 +33,7 @@ const best_swiper = new Swiper(bestSwiper,{
     spaceBetween:80,
     loop: true,
     centeredSlides: true,
+    centeredSlidesBounds: true,
     navigation:{
         prevEl:'.best_prev',
         nextEl:'.best_next',
@@ -115,23 +116,45 @@ const record = document.querySelectorAll('.marshall_g [class ^= record]');
 const drums = document.querySelectorAll('.marshall_g [class ^= drums]');
 // console.log(record,drums);
 
-for(let d of drums) {d.style.display='none';}
-for(let r of drums) {r.style.display='none';}
-record[0].style.display = 'none';
-drums[0].style.display = 'flex';
+// for(let d of drums) {d.style.display='none';}
+// for(let r of drums) {r.style.display='none';}
+// record[0].style.display = 'none';
+// drums[0].style.display = 'flex';
 
-drums[0].addEventListener('click',()=>{
-    record[0].style.display = 'flex';
-    record[1].style.display = 'none';
-    drums[0].style.display = 'none';
-    drums[1].style.display = 'flex';
-})
-record[0].addEventListener('click',()=>{
-    record[0].style.display = 'none';
-    record[1].style.display = 'flex';
-    drums[0].style.display = 'flex';
-    drums[1].style.display = 'none';
-})
+// drums[0].addEventListener('click',()=>{
+//     record[0].style.display = 'flex';
+//     record[1].style.display = 'none';
+//     drums[0].style.display = 'none';
+//     drums[1].style.display = 'flex';
+// })
+// record[0].addEventListener('click',()=>{
+//     record[0].style.display = 'none';
+//     record[1].style.display = 'flex';
+//     drums[0].style.display = 'flex';
+//     drums[1].style.display = 'none';
+// })
+
+for(let d of drums) {d.style.width ='0';}
+for(let r of record) {r.style.width ='0';}
+drums[1].style.transition = 'width 0.5s';
+record[1].style.transition = 'width 0.5s';
+
+record[1].style.width = '1408px';
+drums[0].style.width = '152px';
+
+drums[0].addEventListener('click', () => {
+    record[0].style.width = '152px';
+    record[1].style.width = '0';
+    drums[1].style.width = '1408px';
+    drums[0].style.width = '0';
+});
+
+record[0].addEventListener('click', () => {
+    record[1].style.width = '1408px';
+    record[0].style.width = '0';
+    drums[0].style.width = '152px';
+    drums[1].style.width = '0';
+});
 
 // 7행 swiper
 const guide_swiper = document.querySelector('.guide_swiper');
@@ -159,4 +182,13 @@ const guideSwiper = new Swiper(guide_swiper,{
         prevEl:'.guide_prev',
         nextEl:'.guide_next',
     },
+})
+
+// header 스크롤 내리면 배경 색상 만들기
+const header = document.querySelector('header');
+
+window.addEventListener('scroll',()=>{
+    if(window.scrollY >= 800){
+        header.classList.add('active');
+    } else { header.classList.remove('active'); }
 })
