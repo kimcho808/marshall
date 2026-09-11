@@ -28,24 +28,16 @@ for(let i=0; i<10; i++){
     bestSwiper.children[0].appendChild(bestSlide);
 }
 
-// const best_swiper = new Swiper(bestSwiper,{
-//     //slidesPerView: 'auto',
-//     slidesPerView: 5,
-//     spaceBetween:30,
-//     loop: true,
-//     centeredSlides: true,
-//     // centeredSlidesBounds: true,
-//     navigation:{
-//         prevEl:'.best_prev',
-//         nextEl:'.best_next',
-// 	},
-// }); // 플러그인 연결
-
 const best_swiper = new Swiper(bestSwiper,{
-    slidesPerView: 'auto',
+    slidesPerView: 4.5,
     spaceBetween:30,
     centeredSlides: true,
     loop: true,
+    centeredSlidesBounds: true,
+    navigation:{
+        prevEl:'.best_prev',
+        nextEl:'.best_next',
+    },
 })
 
 // room swiper
