@@ -114,30 +114,13 @@ cart.forEach((cart) => {
 // 6행 이벤트
 const record = document.querySelectorAll('.marshall_g [class ^= record]');
 const drums = document.querySelectorAll('.marshall_g [class ^= drums]');
-// console.log(record,drums);
+const record_content = document.querySelector('.record .marshall_content');
+const drums_content = document.querySelector('.drums .marshall_content');
+console.log(record_content,drums_content);
 
-// for(let d of drums) {d.style.display='none';}
-// for(let r of drums) {r.style.display='none';}
-// record[0].style.display = 'none';
-// drums[0].style.display = 'flex';
-
-// drums[0].addEventListener('click',()=>{
-//     record[0].style.display = 'flex';
-//     record[1].style.display = 'none';
-//     drums[0].style.display = 'none';
-//     drums[1].style.display = 'flex';
-// })
-// record[0].addEventListener('click',()=>{
-//     record[0].style.display = 'none';
-//     record[1].style.display = 'flex';
-//     drums[0].style.display = 'flex';
-//     drums[1].style.display = 'none';
-// })
 
 for(let d of drums) {d.style.width ='0';}
 for(let r of record) {r.style.width ='0';}
-drums[1].style.transition = 'width 0.5s';
-record[1].style.transition = 'width 0.5s';
 
 record[1].style.width = '1408px';
 drums[0].style.width = '152px';
@@ -147,6 +130,8 @@ drums[0].addEventListener('click', () => {
     record[1].style.width = '0';
     drums[1].style.width = '1408px';
     drums[0].style.width = '0';
+    record_content.style.display = 'none';
+    drums_content.style.display = 'block';
 });
 
 record[0].addEventListener('click', () => {
@@ -154,6 +139,8 @@ record[0].addEventListener('click', () => {
     record[0].style.width = '0';
     drums[0].style.width = '152px';
     drums[1].style.width = '0';
+    drums_content.style.display = 'none';
+    record_content.style.display = 'block';
 });
 
 // 7행 swiper
