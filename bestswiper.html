@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--swiper 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--swiper 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <!-- CSS, JS -->
+    <link rel="shortcut icon" href="./images/marshall_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/var.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/marsall_db.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+</head>
+<body>
+    <!-- -------------------------------- 3행 -->
+            <section class="best_item">
+                <div class="content">
+                    <div class="title_nav_more">
+                        <h2>BEST ITEM</h2>
+                        <ul class="best_nav">
+                            <li><a href="#" class="active">AMP</a></li>
+                            <li><a href="#">SPEAKER</a></li>
+                            <li><a href="#">HEADPHONE</a></li>
+                        </ul>
+                        <a href="#" class="more_btn"><img src="./images/view_more.svg" alt="더보기"></a>
+                        <div class="swiper_btn">
+                            <div class="swiper-button-prev best_prev"></div>
+                            <div class="swiper-button-next best_next"></div>
+                        </div>
+                    </div><!-- e:title_nav_more -->
+                </div>
+                <!-- 베스트 아이템 스와이퍼 -->
+                <div class="swiper best_swiper">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="product_g">
+                            <a href="#" class="product_wrap">
+                                <p class="product" style="background-image: url(${bestdb[i].product});"></p>
+                                <h3>${bestdb[i].title}</h3>
+                            </a>
+                            <button type="button" class="cart"><img src="./images/shopping.svg" alt="장바구니 담기"></button>
+                            <a href="#" class="find">판매처 찾기 <img src="./images/img_arrow.svg" alt=""></a>
+                        </div> -->
+                    </div>
+                </div><!-- e:swiper -->
+            </section><!-- -------------------------------- 3행 끝 -->
+</body>
+</html>

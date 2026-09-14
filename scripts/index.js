@@ -17,7 +17,7 @@ for(let i=0; i<10; i++){
     bestSlide.innerHTML = `
         <div class="product_g">
             <a href="#" class="product_wrap">
-                <p class="product" style="background-image: url(${bestdb[i].product});"></p>
+                <p class="product_img"><img src="${bestdb[i].product}" alt=""></img></p>
                 <h3>${bestdb[i].title}</h3>
             </a>
             <button type="button" class="cart"><img src="./images/shopping.svg" alt="장바구니 담기"></button>
@@ -29,15 +29,16 @@ for(let i=0; i<10; i++){
 }
 
 const best_swiper = new Swiper(bestSwiper,{
-    slidesPerView: 'auto',
-    spaceBetween:80,
-    loop: true,
+    slidesPerView: 4.5,
+    spaceBetween:30,
     centeredSlides: true,
+    loop: true,
+    centeredSlidesBounds: true,
     navigation:{
         prevEl:'.best_prev',
         nextEl:'.best_next',
-	},
-}); // 플러그인 연결
+    },
+})
 
 // room swiper
 const roomSwiper = document.querySelector('.room_swiper');
@@ -113,25 +114,43 @@ cart.forEach((cart) => {
 // 6행 이벤트
 const record = document.querySelectorAll('.marshall_g [class ^= record]');
 const drums = document.querySelectorAll('.marshall_g [class ^= drums]');
-// console.log(record,drums);
+const record_content = document.querySelector('.record .marshall_content');
+const drums_content = document.querySelector('.drums .marshall_content');
+const record_arrow = document.querySelector('.record_arrow');
+const drums_arrow = document.querySelector('.drums_arrow');
 
-for(let d of drums) {d.style.display='none';}
-for(let r of drums) {r.style.display='none';}
-record[0].style.display = 'none';
-drums[0].style.display = 'flex';
+console.log(record_content,drums_content);
 
-drums[0].addEventListener('click',()=>{
-    record[0].style.display = 'flex';
-    record[1].style.display = 'none';
-    drums[0].style.display = 'none';
-    drums[1].style.display = 'flex';
-})
-record[0].addEventListener('click',()=>{
-    record[0].style.display = 'none';
-    record[1].style.display = 'flex';
-    drums[0].style.display = 'flex';
-    drums[1].style.display = 'none';
-})
+for(let d of drums) {d.style.width ='0';}
+for(let r of record) {r.style.width ='0';}
+
+record[1].style.width = '1408px';
+drums[0].style.width = '152px';
+
+drums[0].addEventListener('click', () => {
+    drums[1].style.transition = 'width 0.5s ease';
+    record[0].style.width = '152px';
+    record[1].style.width = '0';
+    drums[1].style.width = '1408px';
+    drums[0].style.width = '0';
+    record_content.style.display = 'none';
+    drums_content.style.display = 'block';
+    record_arrow.style.display = 'none';
+    drums_arrow.style.display = 'block';
+    // transition: width 0.5s ease;
+});
+
+record[0].addEventListener('click', () => {
+    record[1].style.transition = 'width 0.5s ease';
+    record[1].style.width = '1408px';
+    record[0].style.width = '0';
+    drums[0].style.width = '152px';
+    drums[1].style.width = '0';
+    drums_content.style.display = 'none';
+    record_content.style.display = 'block';
+    record_arrow.style.display = 'block';
+    drums_arrow.style.display = 'none';
+});
 
 // 7행 swiper
 const guide_swiper = document.querySelector('.guide_swiper');
@@ -159,4 +178,13 @@ const guideSwiper = new Swiper(guide_swiper,{
         prevEl:'.guide_prev',
         nextEl:'.guide_next',
     },
+})
+
+// header 스크롤 내리면 배경 색상 만들기
+const header = document.querySelector('header');
+
+window.addEventListener('scroll',()=>{
+    if(window.scrollY >= 800){
+        header.classList.add('active');
+    } else { header.classList.remove('active'); }
 })

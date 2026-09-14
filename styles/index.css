@@ -9,10 +9,10 @@
 #wrap {max-width:1920px; min-width:var(--content-width); margin:auto 0;}
 header {
     display:flex; justify-content:center; 
-    background:var(--main-color);
     width: 100%; z-index:999;
     position:fixed; left:0;
 }
+header.active {background:var(--main-color);}
 header .content {
     display:flex; justify-content:space-between;
     align-items:center;
@@ -81,11 +81,20 @@ header .content .nav_right .Language_btn .Language_sub {
 header .content .nav_right .Language_btn .Language_sub li {}
 header .content .nav_right .Language_btn .Language_sub li a {}
 /* -------------------------------------------------------------------------- js로 클릭 이벤트 바꾸기 */
-header .content .nav_right .Language_btn:hover .Language_sub {display:flex;}
+/* header .content .nav_right .Language_btn:hover .Language_sub {display:flex;} */
 /* -------------------------------------------------------- 행 시작 */
 /* --------------- 히어로 */
 main {}
-main iframe {width:100%; height:100vh;}
+main .video-background {}
+main .video-background iframe {width:100%; height:100vh; pointer-events: none;}
+main .video-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
 /* -------------------------------------------- 2행 */
 main .marshall_contents {
     display:flex;
@@ -108,12 +117,13 @@ main .marshall_contents .content .summary_g {
 }
 main .marshall_contents .content .summary_g div {
     width:500px; height:618px;
-    position: relative;
+    position: relative; transition: all 0.5s ease;
 }
 main .marshall_contents .content .summary_g div::after {
     content:''; position:absolute; bottom:0; left:0;
     display:block; width:100%; height:100%; z-index:70;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    transition: all 0.5s ease;
 }
 main .marshall_contents .content .summary_g .rock_sound {background-image:url(../images/rock_sound.png);}
 main .marshall_contents .content .summary_g .heritage {background-image:url(../images/heritage.png);}
@@ -124,7 +134,8 @@ main .marshall_contents .content .summary_g div * {
 }
 main .marshall_contents .content .summary_g h3 {
     display:flex; flex-flow:column nowrap; justify-content:center; align-items: center;
-    position:absolute; top:449px; left:151.5px;
+    position:absolute; top:449px; left:151.5px; 
+    transition: top 0.4s ease 0.2s, transform 0.4s ease 0.2s;
 }
 main .marshall_contents .content .summary_g h3 br {display:none;}
 main .marshall_contents .content .summary_g div > h3 {
@@ -141,19 +152,26 @@ main .marshall_contents .content .summary_g div > h3 > em {
 main .marshall_contents .content .summary_g div .sound_summary {
     text-align:center;
     line-height:1.6em;
+    position: absolute; 
+    top: 60%; width:100%;
+    left: 50%;
+    transform: translate(-50%, 0);
     opacity:0;
+    transition: opacity 0.3s ease, top 0.4s ease, transform 0.3s ease;
 }
 main .marshall_contents .content .summary_g div .arrow {width:42px; position:absolute; left:229px; bottom:40px;}
 main .marshall_contents .content .summary_g div .arrow img {width:100%;}
 /* ------------------------------------ 2행 마우스 호버 */
 main .marshall_contents .content .summary_g div:hover .sound_summary {
     opacity:1;
-    position:absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%); width:100%;
+    top: 50%; width:100%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease 0.2s, top 0.4s ease 0.2s, transform 0.4s ease;
 }
 main .marshall_contents .content .summary_g div:hover h3 {
-    top: 32%; left: 50%;
-    transform: translate(-50%, -32%); width:100%;
+    top: 32%;
+    transform: translateY(-50%);
+    transition: top 0.4s ease, transform 0.4s ease;
 }
 main .marshall_contents .content .summary_g div:hover .arrow {display:none;}
 main .marshall_contents .content .summary_g div:hover::after {background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 80%);}
@@ -172,22 +190,15 @@ main .best_item .content .title_nav_more .best_nav {display:flex; gap:18px;}
 main .best_item .content .title_nav_more .best_nav .active {color:var(--point-color);}
 main .best_item .content .title_nav_more .more_btn {position:absolute; top:130%; left:0;}
 /* best swiper */
-main .best_item .best_swiper {width:100%; height:530px; padding-bottom:5px;}
+main .best_item .best_swiper {width:100%; padding: 44px 0;}
 main .best_item .best_swiper .swiper-wrapper {}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide {width:max-content;}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g  {position: relative; z-index:70;}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g:hover .cart {display:block;}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g:hover .find {display:flex;}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap  {}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide.swiper-slide-active .product_g .product_wrap .product {width:530px; height:500px; border-radius:24px 0 0 0;}
-main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product {
-    width:374px; height:345px;
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    margin-bottom:10px;
-    border-radius:18px 0 0 0; transition: all 0.4s ease;
-}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide {transform:scale(0.86); overflow:hidden;}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide-active {transform:scale(1.1);}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide-active .product_img {margin-bottom:12px; overflow:hidden; border-radius:18px 0 0 0;}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g { border-radius:20px;}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap {overflow:hidden;}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product_img {position:relative; margin-bottom:10px; overflow:hidden; border-radius:18px 0 0 0;}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product_img img {width:100%;}
 main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap h3 {
     text-align:center; color:var(--font-color);
     font-size:var(--nav-content);
@@ -210,6 +221,8 @@ main .best_item .best_next {
     width:26px;
     top:80%;
 }
+main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g:hover .find {display: flex;}
+main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g:hover .cart {display: flex;}
 main .best_item .content .title_nav_more .swiper_btn .best_prev {
     background-image:url(../images/prev.svg);
     left:94%;
@@ -325,14 +338,14 @@ main .history .content .title .history_content br {display:none;}
 #wrap main .marshall_g li > * {border-radius:10px;}
 #wrap main .marshall_g > li {
     display:flex; height:645px;
-} 
-#wrap main .marshall_g li .record {background: #343434;} 
-#wrap main .marshall_g li .record h3 {} 
-#wrap main .marshall_g li .record h3 img {} 
-#wrap main .marshall_g li .record .content_arrow {} 
-#wrap main .marshall_g li .record .content_arrow .content {} 
-#wrap main .marshall_g li .record .content_arrow p:nth-child(2) {} 
-#wrap main .marshall_g li .record .content_arrow p:nth-child(2) img {} 
+}
+#wrap main .marshall_g li .record {background: #343434;}
+#wrap main .marshall_g li .record h3 {}
+#wrap main .marshall_g li .record h3 img {}
+#wrap main .marshall_g li .record .content_arrow {}
+#wrap main .marshall_g li .record .content_arrow .content {}
+#wrap main .marshall_g li .record .content_arrow p:nth-child(2) {}
+#wrap main .marshall_g li .record .content_arrow p:nth-child(2) img {}
 /* -------------------------- 공통 */
 #wrap main .marshall_g li .record .back_img {
     position:absolute; z-index: 1; left:0; top:0;
@@ -347,6 +360,8 @@ main .history .content .title .history_content br {display:none;}
 #wrap main .marshall_g li .record,
 #wrap main .marshall_g li .drums {
     position: relative; overflow:hidden;
+    width:1408px;
+    background-repeat:no-repeat; background-size:cover; background-position:center -20%;
     padding:80px 0; display:flex; flex-flow:column nowrap; justify-content:space-between; align-items:center;
 }
 #wrap main .marshall_g li .record::after,
@@ -360,15 +375,17 @@ main .history .content .title .history_content br {display:none;}
     display:flex; flex-flow:column nowrap; gap:18px; align-items:center;
     position:relative; z-index: 10;
 }
-#wrap main .marshall_g li .plus {} 
+#wrap main .marshall_g li .plus {}
 #wrap main .marshall_g li [class*="none"] h3 {
     writing-mode: vertical-rl;
     font-size:var(--title_mx);
 }
+
 #wrap main .marshall_g [class*="none"] {
     width:152px; background:#242424; padding:50px 0; gap:16px;
-    display:flex; flex-flow:column nowrap; align-items:center;
+    display:flex; flex-flow:column nowrap; align-items:center; overflow: hidden;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(197, 160, 89, 0.8) 300%);
+    cursor:pointer;
 }
 #wrap main .marshall_g li .drums,
 #wrap main .marshall_g li .record {
@@ -383,14 +400,18 @@ main .history .content .title .history_content br {display:none;}
 #wrap main .marshall_g li .drums {background: #343434;}
 /* -------------------------------------------- 7행 */
 #wrap main .guide {background:var(--main-color);}
-#wrap main .guide .content {padding:120px 30px;}
+#wrap main .guide .content {padding:120px 30px; display:flex; flex-flow:column nowrap; align-items:center;}
 #wrap main .guide .content .title_swiper_btn {
-    width:var(--content-width); margin-bottom:40px;
+    width:var(--content-width); margin-bottom:40px; position:relative;
 }
 #wrap main .guide .content .title_swiper_btn h2 {
     color:var(--font-color);
     font-size:var(--title-l);
-    font-family:'Baskervville';
+    font-family:'Baskervville'; margin-left:16px;
+}
+#wrap main .guide .content .title_swiper_btn h2::after {
+    content:''; display:block; position:absolute; left:0; top:0;
+    background:#AC915C; width:4px; height:34px;
 }
 #wrap main .guide .content .title_swiper_btn .swiper_btn {}
 #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev,
@@ -399,14 +420,14 @@ main .history .content .title .history_content br {display:none;}
     background-position:center;
     background-size:cover;
     width:26px;
-    top:80%;
+    top:60%; opacity: 1;
 }
-#wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev {background-image:url(../images/prev.svg);}
+#wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev {background-image:url(../images/prev.svg); left:94%;}
 #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev svg {display:none;}
 #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next {background-image:url(../images/next.svg);}
 #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next svg {display:none;}
 /* swiper */
-#wrap main .guide .content .guide_swiper {}
+#wrap main .guide .content .guide_swiper {width:100%;}
 #wrap main .guide .content .guide_swiper .swiper-wrapper {}
 #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide {}
 #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g {}
@@ -414,4 +435,57 @@ main .history .content .title .history_content br {display:none;}
     margin-bottom:12px;
 }
 #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img img {}
-#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g h3 {color:var(--font-color);}
+#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g h3 {color:var(--font-color); font-size:var(--nav-content);}
+/* -------------------------------------------- 8행 */
+#wrap main .marsahall_about {
+    background-image:url(../images/about.png);
+    display:flex; flex-flow:column nowrap; align-items:center;
+}
+#wrap main .marsahall_about .content {
+    width:var(--content-width);
+    display:flex; flex-flow:column nowrap; align-items:center; justify-content:center;
+    gap:34px; padding:120px 0;
+}
+#wrap main .marsahall_about .content h2 {
+    font-size:var(--title-l);
+    font-family:'Baskervville';
+}
+#wrap main .marsahall_about .content .about_down {display:flex; flex-flow:row wrap;}
+#wrap main .marsahall_about .content .about_up {display:flex; flex-flow:column nowrap;}
+#wrap main .marsahall_about .content span br {display:none;}
+#wrap main .marsahall_about .content * {color:var(--font-color); font-size:var(--nav-content); line-height:1.68em; text-align:center;}
+#wrap main .marsahall_about .content .more {padding:10px 0; font-size:var(--s-find); display:flex; align-items:center; gap:6px;}
+#wrap main .marsahall_about .content .more img {
+    width:12px; display: block;
+    transform: translateY(1.5px);
+}
+/* -------------------------------------------- footer */
+#wrap footer {
+    background:var(--main-color);
+    display:flex; justify-content:center;
+}
+#wrap footer * {color:var(--font-color);}
+#wrap footer .content {
+    padding:100px 0; display:flex; justify-content:space-between;
+    width:var(--content-width);
+}
+/* 왼쪽 */
+#wrap footer .content .left {
+    display:flex; flex-flow:column nowrap; gap:20px;
+}
+#wrap footer .content .left .auth_notice {font-size:var(--sub-font); font-weight:500;}
+#wrap footer .content .left .detail {}
+#wrap footer .content .left .detail * {
+    font-size:var(--s-find); margin-bottom:10px;
+}
+#wrap footer .content .left .detail p:nth-child {margin-bottom:0;}
+#wrap footer .content .left .footer_copy {font-size:var(--s-find); font-weight:500;}
+/* 오른쪽 */
+#wrap footer .content .right {display:flex; gap:64px;}
+#wrap footer .content .right h4 {margin-bottom:22px; font-size:var(--sub-font); font-weight:500; text-align:end;}
+#wrap footer .content .right ul {}
+#wrap footer .content .right ul li {margin-bottom:12px; text-align:end;}
+#wrap footer .content .right .service_sub li:nth-child(5) {margin-bottom:0;}
+#wrap footer .content .right .social_sub li:nth-child(3) {margin-bottom:0;}
+#wrap footer .content .right .marshall li:nth-child(3) {margin-bottom:0;}
+#wrap footer .content .right ul li a {font-size:var(--sub-font); color:var(--footer);}
