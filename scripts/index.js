@@ -50,6 +50,20 @@ const best_swiper = new Swiper(bestSwiper,{
     },
 })
 
+// 클릭이벤트 막기
+const best_nav = document.querySelectorAll('.best_nav a')
+
+for (let i of best_nav) {
+    i.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        for (let j of best_nav) {
+            j.classList.remove('active');
+        }
+
+        i.classList.add('active');
+    });
+}
 // room swiper
 const roomSwiper = document.querySelector('.room_swiper');
 // console.log(roomSwiper);
