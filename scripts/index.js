@@ -6,6 +6,16 @@
     * WARNING: This script does not process real transactions or user credentials.
     * All functions are for demonstration purposes only.
 */
+// 언어 클릭 이벤트
+const Language = document.querySelector('.Language');
+const Language_sub = document.querySelector('.Language_sub');
+
+Language.addEventListener('click',()=>{
+    if(Language_sub.style.display == 'none'){
+        Language_sub.style.display = 'flex';
+    } else {Language_sub.style.display = 'none';}
+})
+
 // best item swiper 만들기
 const bestSwiper = document.querySelector('.best_swiper');
 // console.log(bestSwiper);
@@ -112,45 +122,126 @@ cart.forEach((cart) => {
 });
 
 // 6행 이벤트
-const record = document.querySelectorAll('.marshall_g [class ^= record]');
-const drums = document.querySelectorAll('.marshall_g [class ^= drums]');
-const record_content = document.querySelector('.record .marshall_content');
+// const record = document.querySelectorAll('.marshall_g [class ^= record]');
+// const drums = document.querySelectorAll('.marshall_g [class ^= drums]');
+// const record_content = document.querySelector('.record .marshall_content');
+// const drums_content = document.querySelector('.drums .marshall_content');
+// const record_arrow = document.querySelector('.record_arrow');
+// const drums_arrow = document.querySelector('.drums_arrow');
+
+// console.log(record_content,drums_content);
+
+// for(let d of drums) {d.style.width ='0';}
+// for(let r of record) {r.style.width ='0';}
+
+// record[1].style.width = '1408px';
+// drums[0].style.width = '152px';
+
+// drums[0].addEventListener('click', () => {
+//     drums[1].style.transition = 'width 0.5s ease';
+//     record[0].style.width = '152px';
+//     record[1].style.width = '0';
+//     drums[1].style.width = '1408px';
+//     drums[0].style.width = '0';
+//     record_content.style.display = 'none';
+//     drums_content.style.display = 'block';
+//     record_arrow.style.display = 'none';
+//     drums_arrow.style.display = 'block';
+// });
+
+// record[0].addEventListener('click', () => {
+//     record[1].style.transition = 'width 0.5s ease';
+//     record[1].style.width = '1408px';
+//     record[0].style.width = '0';
+//     drums[0].style.width = '152px';
+//     drums[1].style.width = '0';
+//     drums_content.style.display = 'none';
+//     record_content.style.display = 'block';
+//     record_arrow.style.display = 'block';
+//     drums_arrow.style.display = 'none';
+// });
+
+// const recordNone = document.querySelector('.marshall_g .record_none');
+// const record = document.querySelector('.marshall_g .record');
+// const drumsNone = document.querySelector('.marshall_g .drums_none');
+// const drums = document.querySelector('.marshall_g .drums');
+
+// const record_content = document.querySelector('.record .marshall_content');
+// const drums_content = document.querySelector('.drums .marshall_content');
+// const record_arrow = document.querySelector('.record_arrow');
+// const drums_arrow = document.querySelector('.drums_arrow');
+
+// recordNone.style.width = '0';
+// record.style.width = '1408px';
+// drumsNone.style.width = '152px';
+// drums.style.width = '0';
+
+// drumsNone.addEventListener('click', () => {
+//     record.style.transition = 'width 0.5s ease';
+//     drums.style.transition = 'width 0.5s ease';
+
+//     recordNone.style.width = '152px';
+//     record.style.width = '0';
+//     drumsNone.style.width = '0';
+//     drums.style.width = '1408px';
+
+//     record_content.style.display = 'none';
+//     drums_content.style.display = 'block';
+//     record_arrow.style.display = 'none';
+//     drums_arrow.style.display = 'block';
+// });
+
+// recordNone.addEventListener('click', () => {
+//     record.style.transition = 'width 0.5s ease';
+//     drums.style.transition = 'width 0.5s ease';
+
+//     recordNone.style.width = '0';
+//     record.style.width = '1408px';
+//     drumsNone.style.width = '152px';
+//     drums.style.width = '0';
+
+//     drums_content.style.display = 'none';
+//     record_content.style.display = 'block';
+//     record_arrow.style.display = 'block';
+//     drums_arrow.style.display = 'none';
+// });
+
+const record = document.querySelector('.record_history');
+const drums = document.querySelector('.drums');
+const history_none = document.querySelector('.history_none');
+const historyH = document.querySelector('.history_none h3');
 const drums_content = document.querySelector('.drums .marshall_content');
+const record_content = document.querySelector('.record_history .marshall_content');
 const record_arrow = document.querySelector('.record_arrow');
 const drums_arrow = document.querySelector('.drums_arrow');
 
-console.log(record_content,drums_content);
 
-for(let d of drums) {d.style.width ='0';}
-for(let r of record) {r.style.width ='0';}
+drums.style.width = '0';
 
-record[1].style.width = '1408px';
-drums[0].style.width = '152px';
+history_none.addEventListener('click', () => {
+    record.style.transition = 'width 0.5s ease';
+    drums.style.transition = 'width 0.5s ease';
 
-drums[0].addEventListener('click', () => {
-    drums[1].style.transition = 'width 0.5s ease';
-    record[0].style.width = '152px';
-    record[1].style.width = '0';
-    drums[1].style.width = '1408px';
-    drums[0].style.width = '0';
-    record_content.style.display = 'none';
-    drums_content.style.display = 'block';
-    record_arrow.style.display = 'none';
-    drums_arrow.style.display = 'block';
-    // transition: width 0.5s ease;
+    if (record.style.width === '1408px' && drums.style.width === '0px') {
+        record.style.width = '0';
+        drums.style.width = '1408px';
+        drums_content.style.display = 'block';
+        record_content.style.display = 'none';
+        drums_arrow.style.display = 'block';
+        record_arrow.style.display = 'none';
+        historyH.textContent = 'MARSHALL RECORDS';
+    } else {
+        // 거짓(아니면) 원래대로 복구
+        record.style.width = '1408px';
+        drums.style.width = '0';
+        drums_content.style.display = 'none';
+        record_content.style.display = 'block';
+        drums_arrow.style.display = 'none';
+        record_arrow.style.display = 'block';
+        historyH.textContent = 'NATAL DRUMS';
+    }
 });
 
-record[0].addEventListener('click', () => {
-    record[1].style.transition = 'width 0.5s ease';
-    record[1].style.width = '1408px';
-    record[0].style.width = '0';
-    drums[0].style.width = '152px';
-    drums[1].style.width = '0';
-    drums_content.style.display = 'none';
-    record_content.style.display = 'block';
-    record_arrow.style.display = 'block';
-    drums_arrow.style.display = 'none';
-});
 
 // 7행 swiper
 const guide_swiper = document.querySelector('.guide_swiper');
