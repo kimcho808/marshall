@@ -6,7 +6,7 @@
     Any resemblance to real-world commercial sites is purely for design practice.
 */
 /* --------------------------- 상단 고정바 */
-#wrap {width:100%; min-width:var(--content-width); margin:auto 0;}
+#wrap {width:100%; /* min-width:var(--content-width); */ margin:auto 0;}
 #wrap header {
     display:flex; justify-content:center; 
     width: 100%; z-index:999;
@@ -106,7 +106,7 @@
     margin-bottom:80px;
 }
 #wrap main .marshall_contents .content .summary_g {
-    display:flex; justify-content:space-between;
+    display:flex;
     gap:30px;
 }
 #wrap main .marshall_contents .content .summary_g a {
@@ -119,6 +119,11 @@
     display:block; width:100%; height:100%; z-index:70;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
     transition: all 0.5s ease;
+}
+#wrap main .marshall_contents .content .summary_g .rock_sound,
+#wrap main .marshall_contents .content .summary_g .heritage,
+#wrap main .marshall_contents .content .summary_g .free_power {
+    background-size:cover; background-position:center;
 }
 #wrap main .marshall_contents .content .summary_g .rock_sound {background-image:url(../images/rock_sound.png);}
 #wrap main .marshall_contents .content .summary_g .heritage {background-image:url(../images/heritage.png);}
@@ -156,7 +161,7 @@
     opacity:0;
     transition: opacity 0.3s ease, top 0.4s ease, transform 0.3s ease;
 }
-#wrap main .marshall_contents .content .summary_g a .arrow {width:42px; position:absolute; left:229px; bottom:40px;}
+#wrap main .marshall_contents .content .summary_g a .arrow {width:42px; position:absolute; left:50%; transform:translateX(-50%); bottom:40px;}
 #wrap main .marshall_contents .content .summary_g a .arrow img {width:100%;}
 /* ------------------------------------ 2행 마우스 호버 */
 #wrap main .marshall_contents .content .summary_g a:hover .sound_summary {
@@ -235,7 +240,7 @@
     flex-flow:column nowrap; align-items:center;
 }
 #wrap main .room_item .title_img {
-    background-image:url(../images/room_back.png); width:100%; height:405px;
+    background-image:url(../images/room_back.png); width:1920px; height:405px;
     background-position:center;
     background-size:cover; position:relative;
 }
@@ -287,6 +292,7 @@
 #wrap main .outdoors .content .outdoors_img {
     position:sticky; left:0; top:50px;
     background-image:url(../images/outdoors.png); width:1134px; height:728px;
+    background-size:cover;
 }
 #wrap main .outdoors .content .outdoors_img .more {
     position:absolute; bottom:44px; right:60px;
@@ -425,22 +431,24 @@
 #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next {background-image:url(../images/next.svg);}
 #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next svg {display:none;}
 /* swiper */
-#wrap main .guide .content .guide_swiper {width:100%;}
+#wrap main .guide .content .guide_swiper {width:1920px;}
 #wrap main .guide .content .guide_swiper .swiper-wrapper {}
 #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide {}
 #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g {}
 #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {
     margin-bottom:12px;
 }
-#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img img {}
+#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img img {width:100%;}
 #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g h3 {color:var(--font-color); font-size:var(--nav-content);}
 /* -------------------------------------------- 8행 */
 #wrap main .marsahall_about {
-    background-image:url(../images/about.png);
+    background:var(--main-color);
     display:flex; flex-flow:column nowrap; align-items:center;
 }
 #wrap main .marsahall_about .content {
-    width:var(--content-width);
+    width:1920px;
+    background-image:url(../images/about.png);
+    background-size:cover; background-position:center; background-repeat: no-repeat;
     display:flex; flex-flow:column nowrap; align-items:center; justify-content:center;
     gap:34px; padding:120px 0;
 }
