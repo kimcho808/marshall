@@ -7,36 +7,36 @@
 */
 /* --------------------------- 상단 고정바 */
 #wrap {max-width:1920px; min-width:var(--content-width); margin:auto 0;}
-header {
+#wrap header {
     display:flex; justify-content:center; 
     width: 100%; z-index:999;
     position:fixed; left:0;
 }
-header.active {background:var(--main-color);}
-header .content {
+#wrap header.active {background:var(--main-color);}
+#wrap header .content {
     display:flex; justify-content:space-between;
     align-items:center;
     width:1560px;
 }
-header .content .logo {width:140px;}
-header .content .logo a {}
-header .content .logo a img {width:100%;}
+#wrap header .content .logo {width:140px;}
+#wrap header .content .logo a {}
+#wrap header .content .logo a img {width:100%;}
 /* 네비 */
-header .content nav {}
-header .content nav .main_nav {
+#wrap header .content nav {}
+#wrap header .content nav .main_nav {
     display:flex;
     gap:24px;
 }
-header .content nav .main_nav > li {
+#wrap header .content nav .main_nav > li {
     position: relative; width:max-content; height:max-content;
 }
-header .content nav .main_nav > li > a {
+#wrap header .content nav .main_nav > li > a {
     display:block;
     text-align:center;
     font-size:var(--nav-content); padding:23px 0;
 }
-header .content nav .main_nav li a {color:var(--font-color);}
-header .content nav .main_nav > li > ul {
+#wrap header .content nav .main_nav li a {color:var(--font-color);}
+#wrap header .content nav .main_nav > li > ul {
     display:flex;
     flex-flow:column nowrap;
     justify-content:center;
@@ -45,7 +45,6 @@ header .content nav .main_nav > li > ul {
     width:max-content;
     background:rgba(0, 0, 0, 0.86);
     position: absolute;
-    padding-top:10px;
     top: 56px;
     left:50%;
     transform:translateX(-50%);
@@ -62,6 +61,7 @@ header .content .nav_right {
 header .content .nav_right * {color:var(--font-color);}
 header .content .nav_right > a {display:block; width:24px;}
 header .content .nav_right > a img {width:100%;}
+header .content .nav_right .menu_g {display:none;}
 header .content .nav_right .Language_btn {position:relative;}
 header .content .nav_right .Language_btn .Language {
     display:flex; gap:4;
@@ -79,16 +79,16 @@ header .content .nav_right .Language_btn .Language_sub {
     display:none;
 }
 header .content .nav_right .Language_btn .Language_sub li {}
-header .content .nav_right .Language_btn .Language_sub li a {}
-/* -------------------------------------------------------------------------- js로 클릭 이벤트 바꾸기 */
-/* header .content .nav_right .Language_btn:hover .Language_sub {display:flex;} */
+header .content .nav_right .Language_btn .Language_sub li button {color:#666666;}
+header .content .nav_right .Language_btn .Language_sub li .active {font-weight:500; color:var(--font-color);}
 /* -------------------------------------------------------- 행 시작 */
 /* --------------- 히어로 */
 main {width: 100%;
     margin: 0;
     padding: 0;
-    line-height: 0;}
-main video {width:100%; height:100vh; object-fit: cover;}
+    line-height: 0;
+    overflow:hidden;}
+main video {width:100%; height:100vh; transform:scale(1.28);}
 /* -------------------------------------------- 2행 */
 main .marshall_contents {
     display:flex;
@@ -128,7 +128,8 @@ main .marshall_contents .content .summary_g div * {
 }
 main .marshall_contents .content .summary_g h3 {
     display:flex; flex-flow:column nowrap; justify-content:center; align-items: center;
-    position:absolute; top:449px; left:151.5px; 
+    position:absolute; top:449px; left: 50%;
+    transform: translateX(-50%); 
     transition: top 0.4s ease 0.2s, transform 0.4s ease 0.2s;
 }
 main .marshall_contents .content .summary_g h3 br {display:none;}
@@ -159,13 +160,13 @@ main .marshall_contents .content .summary_g div .arrow img {width:100%;}
 /* ------------------------------------ 2행 마우스 호버 */
 main .marshall_contents .content .summary_g div:hover .sound_summary {
     opacity:1;
-    top: 50%; width:100%;
+    top: 56%; width:100%;
     transform: translate(-50%, -50%);
     transition: opacity 0.4s ease 0.2s, top 0.4s ease 0.2s, transform 0.4s ease;
 }
 main .marshall_contents .content .summary_g div:hover h3 {
-    top: 32%;
-    transform: translateY(-50%);
+    top: 38%;
+    transform: translate(-50%, -50%);
     transition: top 0.4s ease, transform 0.4s ease;
 }
 main .marshall_contents .content .summary_g div:hover .arrow {display:none;}

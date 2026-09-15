@@ -1,0 +1,45 @@
+/* 반응형 디자인 */
+/* 태블릿 */
+@media screen and (max-width:1024px) {/* 최대 1024px 일때 */
+    /* 상단 고정바 */
+    #wrap header .content {width:var(--t-content-width); padding:12px 68px;}
+    #wrap header .content nav {display:none; position: relative;}
+    #wrap header .content .logo a {display:block; width:132px; height:34px;}
+    #wrap header .content .logo a img {width:100%;}
+    #wrap header .content .nav_right {gap:18px;}
+    #wrap header .content .nav_right a img {width:30px;}
+    #wrap header .content .nav_right .Language_btn {display:none;}
+    /* 전체 메뉴 */
+    #wrap header .content .nav_right .menu_g {display:flex;}
+    #wrap header .content .nav_right .menu_g .menu {
+        position:absolute; right:0px; top:58px; background:rgba(18, 18, 18, 0.86);
+        height:0; opacity:0;
+    }
+    #wrap header .content .nav_right .menu_g .menu.active {height:100vh; width:380px; opacity:1; padding:32px 30px;}
+    #wrap header .content .nav_right .menu_g .menu button {
+        position:relative; color:#666666;
+        font-size:var(--t-nav-title); padding:8px 8px 8px 0;
+    }
+    #wrap header .content .nav_right .menu_g .menu .outlet {color:#666666;
+        font-size:var(--t-nav-title); padding:8px 8px 8px 0; position: relative;}
+    #wrap header .content .nav_right .menu_g .menu .outlet::after{
+        content:''; display:block; position:absolute; right:-6px;
+        background:#666; height:22px; width:2px;
+    }
+    #wrap header .content .nav_right .menu_g .menu button::after {
+        content:''; display:block; position:absolute; right:-6px;
+        background:#666; height:22px; width:2px;
+    }
+    #wrap header .content .nav_right .menu_g .menu > li {margin-bottom:28px;}
+    #wrap header .content .nav_right .menu_g .menu > li:nth-child(5) {margin-bottom:0px;}
+    #wrap header .content .nav_right .menu_g .menu * {
+        display:flex; flex-flow:column nowrap; justify-content:center; align-items:flex-end;
+    }
+    #wrap header .content .nav_right .menu_g .menu ul {height:0; opacity:0;}
+    #wrap header .content .nav_right .menu_g .menu ul li a {color:var(--font-color);}
+    /* -------------------------------------------- 히어로 */
+    main video {width:var(--t-content-width); height:580px; transform:scale(1.35);}
+    /* -------------------------------------------- 2행 */
+    main .marshall_contents {padding:80px 68px;}
+    main .marshall_contents .content {max-width:var(--t-content-width);}
+}

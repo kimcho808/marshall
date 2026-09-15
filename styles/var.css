@@ -6,6 +6,8 @@
     --sub-font:0.875rem;
     --s-find:0.75rem;
     --title_mx:1.875rem;
+    --t-title-l:1.75rem;
+    --t-nav-title:1.375rem;
 
     /* color */
     --main-color:#121212;
@@ -16,4 +18,5 @@
 
     /* width */
     --content-width:1560px;
+    --t-content-width:1024px;
 }
