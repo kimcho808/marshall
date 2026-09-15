@@ -224,20 +224,20 @@ window.addEventListener('scroll',()=>{
     } else { header.classList.remove('active'); }
 })
 
-// 태블릿 메뉴 누르면 나오기
-// const menuBtn = document.querySelector('.all_menu');
-// const menu = document.querySelector('.menu');
-// console.log(menuBtn, menu);
+//태블릿 메뉴 누르면 나오기
+const menuBtn = document.querySelector('.all_menu');
+const menu = document.querySelector('.menu');
+console.log(menuBtn, menu);
 
-// menuBtn.addEventListener('click', () => {
-//     menu.classList.toggle('active');
-// });
+menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
 
 
-// 태블릿 서브메뉴
-// const tMenu = document.querySelector('.menu_g .menu button');
-// const tList = document.querySelector('.menu_g .menu ul')
+//태블릿 서브메뉴
+const tMenu = document.querySelector('.menu_g .menu button');
+const tList = document.querySelector('.menu_g .menu ul')
 
-// tMenu.addEventListener('click',()=>{
-//     tList.classList.toggle('active');
-// })
+tMenu.addEventListener('click',()=>{
+    tList.classList.toggle('active');
+})
