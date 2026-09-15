@@ -40,7 +40,7 @@
 ## 아코디언 레이아웃 만드는 법 v2
 * 내용 레코드, 접힌 바, 내용 드럼 순으로 html을 작성하기
 * js에서 기본 값만 보일 수 있도록 내용 드럼을 `drums.style.width = '0';`으로 만들기
-* `if~else`를 사용해 반대쪽 내용의 넓이가 1408px 일때 그것을 0으로 만들고 다른 내용을 `drums.style.width = '1408px';`크게 만들기
+* `if~else`를 사용해 반대쪽 내용의 너비가 1408px 일때 그것을 0으로 만들고 다른 내용을 `drums.style.width = '1408px';`크게 만들기
 * 이벤트 안, if 바깥에 전부 `record.style.transition = 'width 0.5s ease';`을 주면 애니메이션이 들어감
 ## 클릭 이벤트 막는 법
 * `e.preventDefault();`

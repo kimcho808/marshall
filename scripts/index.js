@@ -252,7 +252,6 @@ window.addEventListener('scroll',()=>{
 //태블릿 메뉴 누르면 나오기
 const menuBtn = document.querySelector('.all_menu');
 const menu = document.querySelector('.menu');
-console.log(menuBtn, menu);
 
 menuBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
