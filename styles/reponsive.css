@@ -1,16 +1,14 @@
 /* 반응형 디자인 */
 /* 태블릿 */
-@media screen and (max-width:1024px) {/* 최대 1024px 일때 */
+@media screen and (max-width:1560px) {
     /* 상단 고정바 */
-    #wrap header .content {width:var(--t-content-width); padding:12px 68px;}
-    #wrap header .content nav {display:none; position: relative;}
+    #wrap header .content {width:100%; padding:12px 68px;}
     #wrap header .content .logo a {display:block; width:132px; height:34px;}
     #wrap header .content .logo a img {width:100%;}
     #wrap header .content .nav_right {gap:18px;}
     #wrap header .content .nav_right a img { width:30px;}
-    #wrap header .content .nav_right .Language_btn {display:none;}
     /* 전체 메뉴 */
-    #wrap header .content .nav_right .menu_g {display:flex;}
+    /* #wrap header .content .nav_right .menu_g {display:flex;}
     #wrap header .content .nav_right .menu_g .menu {
         position:absolute; right:0px; top:58px; background:rgba(18, 18, 18, 0.86);
         height:0; opacity:0;
@@ -36,12 +34,12 @@
         display:flex; flex-flow:column nowrap; justify-content:center; align-items:flex-end;
     }
     #wrap header .content .nav_right .menu_g .menu ul {height:0; opacity:0;}
-    #wrap header .content .nav_right .menu_g .menu ul li a {color:var(--font-color);}
+    #wrap header .content .nav_right .menu_g .menu ul li a {color:var(--font-color);} */
     /* -------------------------------------------- 히어로 */
-    #wrap main .video_bg {width:var(--t-content-width); overflow: hidden;}
-    #wrap main .video_bg video {width:var(--t-content-width); height:580px; transform:scale(1.36);}
+    #wrap main .video_bg {width:100%; overflow: hidden;}
+    #wrap main .video_bg video {width:100%; height:580px; transform:scale(1.36);}
     /* -------------------------------------------- 2행 */
-    #wrap main .marshall_contents {padding:80px 64px; display:block; width:100%; width:var(--t-content-width);}
+    #wrap main .marshall_contents {padding:80px 64px; display:block; width:100%;}
     #wrap main .marshall_contents .content {}
     #wrap main .marshall_contents .content h2 {font-size:var(--t-title-l); margin-bottom:50px;}
     #wrap main .marshall_contents .content .summary_g {gap:15px; width:max-content;}
@@ -65,7 +63,7 @@
     }
     #wrap main .marshall_contents .content .summary_g a:hover::after {background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 80%);}
     /* -------------------------------------------- 3행 */
-    #wrap main .best_item {padding:80px 0; display:block; width:var(--t-content-width);}
+    #wrap main .best_item {padding:80px 0; display:block; width:100%;}
     #wrap main .best_item .content {}
     #wrap main .best_item .content .title_nav_more {padding:0 64px; margin-bottom:50px;}
     #wrap main .best_item .content .title_nav_more h2 {font-size:var(--t-title-l);}
@@ -84,7 +82,7 @@
     #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .cart img {width:24px;}
     #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .find {display:flex; font-size:var(--sub-font);}
     /* -------------------------------------------- 4행 */
-    #wrap main .room_item {padding:80px 0; gap:60px; width:var(--t-content-width);}
+    #wrap main .room_item {padding:80px 0; gap:60px; width:100%;}
     #wrap main .room_item .title_img {background-image:url(../images/t_room_bg.png); width:100%; height:306px;}
     #wrap main .room_item .title_img .more {bottom:34px; right:64px;}
     #wrap main .room_item .content .room_swiper {width:var(--t-content-width); padding:0 0 36px 30px;}
@@ -103,7 +101,7 @@
     #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .cart {display:block;}
     /* -------------------------------------------- 6행 */
     #wrap main .history {display: block;}
-    #wrap main .history .content {width:var(--t-content-width); padding:80px 64px;}
+    #wrap main .history .content {width:100%; padding:80px 64px;}
     #wrap main .history .content .title {margin-bottom:50px;}
     #wrap main .history .content .title h2 {font-size:var(--t-title-l);}
     #wrap main .outdoors .content .outdoors_product .outdoors_list li .cart {display:block;}

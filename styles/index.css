@@ -6,7 +6,7 @@
     Any resemblance to real-world commercial sites is purely for design practice.
 */
 /* --------------------------- 상단 고정바 */
-#wrap {max-width:1920px; min-width:var(--content-width); margin:auto 0;}
+#wrap {width:100%; min-width:var(--content-width); margin:auto 0;}
 #wrap header {
     display:flex; justify-content:center; 
     width: 100%; z-index:999;
@@ -187,7 +187,7 @@
 #wrap main .best_item .content .title_nav_more .best_nav .active {color:var(--point-color);}
 #wrap main .best_item .content .title_nav_more .more_btn {position:absolute; top:130%; left:0;}
 /* best swiper */
-#wrap main .best_item .best_swiper {width:100%; padding: 44px 0;}
+#wrap main .best_item .best_swiper {max-width:1920px; padding: 44px 0;}
 #wrap main .best_item .best_swiper .swiper-wrapper {}
 #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide {transform:scale(0.86); overflow:hidden;}
 #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide-active {transform:scale(1.1);}
