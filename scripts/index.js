@@ -57,9 +57,24 @@ const best_swiper = new Swiper(bestSwiper,{
     centeredSlides: true,
     loop: true,
     centeredSlidesBounds: true,
+    autoplay: {
+        delay:3500,
+        disableOnInteraction: false,
+    },
     navigation:{
         prevEl:'.best_prev',
         nextEl:'.best_next',
+    },
+
+    breakpoints: {
+        1024: {
+            slidesPerView: 4.5,
+            spaceBetween: 30,
+        },
+        402: {
+            slidesPerView: 2.5,
+            spaceBetween: 30,
+        },
     },
 })
 
@@ -107,6 +122,16 @@ const room_swiper = new Swiper(roomSwiper,{
     spaceBetween:29,
     scrollbar: {
         el: '.swiper-scrollbar',
+    },
+    breakpoints: {
+        1024: {
+            slidesPerView: 4,
+            spaceBetween:29,
+        },
+        402: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
     },
 })
 

@@ -87,7 +87,8 @@
     margin: 0;
     padding: 0;
     line-height: 0;}
-#wrap main video {width:100%; height:100vh; transform:scale(1.28);}
+#wrap main .video_bg {width:100%; overflow: hidden;}
+#wrap main .video_bg video {width:100%; height:100vh; transform:scale(1.28);}
 /* -------------------------------------------- 2행 */
 #wrap main .marshall_contents {
     display:flex;
@@ -108,11 +109,12 @@
     display:flex; justify-content:space-between;
     gap:30px;
 }
-#wrap main .marshall_contents .content .summary_g div {
+#wrap main .marshall_contents .content .summary_g a {
+    display:block;
     width:500px; height:618px;
     position: relative; transition: all 0.5s ease;
 }
-#wrap main .marshall_contents .content .summary_g div::after {
+#wrap main .marshall_contents .content .summary_g a::after {
     content:''; position:absolute; bottom:0; left:0;
     display:block; width:100%; height:100%; z-index:70;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
@@ -121,7 +123,7 @@
 #wrap main .marshall_contents .content .summary_g .rock_sound {background-image:url(../images/rock_sound.png);}
 #wrap main .marshall_contents .content .summary_g .heritage {background-image:url(../images/heritage.png);}
 #wrap main .marshall_contents .content .summary_g .free_power {background-image:url(../images/free_power.png);}
-#wrap main .marshall_contents .content .summary_g div * {
+#wrap main .marshall_contents .content .summary_g a * {
     color:var(--font-color);
     z-index:80;
 }
@@ -132,18 +134,18 @@
     transition: top 0.4s ease 0.2s, transform 0.4s ease 0.2s;
 }
 #wrap main .marshall_contents .content .summary_g h3 br {display:none;}
-#wrap main .marshall_contents .content .summary_g div > h3 {
+#wrap main .marshall_contents .content .summary_g a > h3 {
     letter-spacing:0;
     font-size:var(--title-m);
     line-height:1.4em;
     font-weight:500;
 }
-#wrap main .marshall_contents .content .summary_g div > h3 > em {
+#wrap main .marshall_contents .content .summary_g a > h3 > em {
     font-size:var(--nav-content);
     line-height:1.4em;
     font-weight:300;
 }
-#wrap main .marshall_contents .content .summary_g div .sound_summary {
+#wrap main .marshall_contents .content .summary_g a .sound_summary {
     text-align:center;
     line-height:1.6em;
     font-size:1rem;
@@ -154,22 +156,21 @@
     opacity:0;
     transition: opacity 0.3s ease, top 0.4s ease, transform 0.3s ease;
 }
-#wrap main .marshall_contents .content .summary_g div .arrow {width:42px; position:absolute; left:229px; bottom:40px;}
-#wrap main .marshall_contents .content .summary_g div .arrow img {width:100%;}
+#wrap main .marshall_contents .content .summary_g a .arrow {width:42px; position:absolute; left:229px; bottom:40px;}
+#wrap main .marshall_contents .content .summary_g a .arrow img {width:100%;}
 /* ------------------------------------ 2행 마우스 호버 */
-#wrap main .marshall_contents .content .summary_g div:hover .sound_summary {
+#wrap main .marshall_contents .content .summary_g a:hover .sound_summary {
     opacity:1;
     top: 56%; width:100%;
     transform: translate(-50%, -50%);
     transition: opacity 0.4s ease 0.2s, top 0.4s ease 0.2s, transform 0.4s ease;
 }
-#wrap main .marshall_contents .content .summary_g div:hover h3 {
+#wrap main .marshall_contents .content .summary_g a:hover h3 {
     top: 38%;
     transform: translate(-50%, -50%);
     transition: top 0.4s ease, transform 0.4s ease;
 }
-#wrap main .marshall_contents .content .summary_g div:hover .arrow {display:none;}
-#wrap main .marshall_contents .content .summary_g div:hover::after {background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 80%);}
+#wrap main .marshall_contents .content .summary_g a:hover::after {background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 80%);}
 /* -------------------------------------------- 3행 */
 #wrap main .best_item {
     background:var(--main-color);
@@ -182,6 +183,7 @@
 #wrap main .best_item .content .title_nav_more * {color:var(--font-color);}
 #wrap main .best_item .content .title_nav_more h2 {letter-spacing:0; margin-bottom:22px; font-size:var(--title-l); font-family:'Baskervville';}
 #wrap main .best_item .content .title_nav_more .best_nav {display:flex; gap:18px;}
+#wrap main .best_item .content .title_nav_more .best_nav * {font-size:var(--nav-content);}
 #wrap main .best_item .content .title_nav_more .best_nav .active {color:var(--point-color);}
 #wrap main .best_item .content .title_nav_more .more_btn {position:absolute; top:130%; left:0;}
 /* best swiper */
@@ -313,7 +315,7 @@
 #wrap main .outdoors .content .outdoors_product .outdoors_list li a .title_price .price {}
 #wrap main .outdoors .content .outdoors_product .outdoors_list li .cart {position:absolute; z-index:80; top:4%; right: 4%; display:none;}
 #wrap main .outdoors .content .outdoors_product .outdoors_list li .cart img {width:24px;}
-/* -------------------------------------------- 5행 */
+/* -------------------------------------------- 6행 */
 #wrap main .history {background:var(--main-color); display:flex; justify-content:center;}
 #wrap main .history .content {width:var(--content-width); padding:120px 0; overflow:hidden;}
 #wrap main .history .content .title {
