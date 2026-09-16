@@ -367,7 +367,7 @@
     animation: backSpin 20s linear infinite;
 }
 #wrap main .marshall_g .drums .back_img {
-    position:absolute; z-index: 1; left:0; top:0;
+    position:absolute; z-index: 1; left:0;
     object-fit: cover; top:33%;
     animation: backSpin 20s linear infinite;
 }
