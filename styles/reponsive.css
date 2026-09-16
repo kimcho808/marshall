@@ -6,8 +6,122 @@
     #wrap header .content .logo a {display:block; width:132px; height:34px;}
     #wrap header .content .logo a img {width:100%;}
     #wrap header .content nav .main_nav > li > a {padding:20px 0;}
+    /* -------------------------------------------- 히어로 */
+    #wrap main .video_bg video {width:100%; height:600px; transform:scale(1.38); aspect-ratio:16/9;}
+    /* -------------------------------------------- 2행 */
+    #wrap main .marshall_contents {padding:0px; display:block; width:100%;}
+    #wrap main .marshall_contents .content {width:100%; padding:80px 64px;}
+    #wrap main .marshall_contents .content h2 {font-size:var(--t-title-l); margin-bottom:50px;}
+    #wrap main .marshall_contents .content .summary_g {width: 100%;}
+    #wrap main .marshall_contents .content .summary_g a {height:550px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:400px;}
+    #wrap main .marshall_contents .content .summary_g a > h3 {font-size:var(--nav-content); width:100%;}
+    #wrap main .marshall_contents .content .summary_g a > h3 > em {font-size:1rem;}
+    #wrap main .marshall_contents .content .summary_g .rock_sound,
+    #wrap main .marshall_contents .content .summary_g .heritage,
+    #wrap main .marshall_contents .content .summary_g .free_power {
+        background-size:cover; background-position:center;
+    }
+    #wrap main .marshall_contents .content .summary_g a:hover h3 {top: 30%;}
+    /* -------------------------------------------- 3행 */
+    #wrap main .best_item {padding:80px 0; display:block;}
+    #wrap main .best_item .content { width:100%; padding:0 64px;}
+    #wrap main .best_item .content .title_nav_more {margin-bottom:50px;}
+    #wrap main .best_item .content .title_nav_more .more_btn {top:130%; left:0%;}
+    #wrap main .best_item .content .title_nav_more h2 {font-size:var(--t-title-l);}
+    #wrap main .best_item .content .title_nav_more .best_nav * {font-size:1rem;}
+    #wrap main .best_item .content .title_nav_more .more_btn {left:0;}
+    #wrap main .best_item .content .title_nav_more .swiper_btn .best_prev {left:92%;}
+    /* swiper */
+    #wrap main .best_item .best_swiper {}
+    #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap h3 {font-size:1rem;}
+    #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .price {font-size:var(--sub-font);}
+    #wrap main .best_item .best_prev,
+    #wrap main .best_item .best_next {width:23px; height:46px;}
+    #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .cart {display: block;}
+    #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .cart img {width:24px;}
+    #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .find {display:flex; font-size:var(--sub-font);}
+    /* -------------------------------------------- 4행 */
+    #wrap main .room_item {padding:80px 0; gap:60px; width:100%;}
+    #wrap main .room_item .title_img {width:100%; height:306px;}
+    #wrap main .room_item .title_img .more {bottom:34px; right:64px;}
+    #wrap main .room_item .content {width:100%; padding:0 64px;}
+    #wrap main .room_item .content .room_swiper { padding-bottom:36px;}
+    #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide {width:300px !important;}
+    #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product_img {width:300px; height:277px;}
+    #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .title_price h3 {font-size:1rem;}
+    #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .title_price .price {font-size:var(--sub-font);}
+    /* -------------------------------------------- 5행 */
+    #wrap main .outdoors .content {padding:80px 30px; display:flex; gap:30px;}
+    #wrap main .outdoors .content .outdoors_img {width:100%; height:600px;}
+    #wrap main .outdoors .content .outdoors_product .outdoors_list {width:608px; gap:14.5;}
+    #wrap main .outdoors .content .outdoors_product .outdoors_list li a .product_img {width:289px; height:267px;}
+    #wrap main .outdoors .content .outdoors_product .outdoors_list li a .title_price h3 {font-size:1rem;}
+    #wrap main .outdoors .content .outdoors_product .outdoors_list li a .title_price .price {font-size:var(--sub-font);}
+    /* -------------------------------------------- 6행 */
+    #wrap main .history {display: block;}
+    #wrap main .history .content {width:100%; padding:80px 64px;}
+    #wrap main .history .content .title {margin-bottom:50px;}
+    #wrap main .history .content .title h2 {font-size:var(--t-title-l);}
+    #wrap main .history .content .title .history_content {font-size:1rem;}
+    #wrap main .marshall_g .marshall_content {font-size:1rem;}
+    #wrap main .marshall_g .history_none h3 {font-size:1.5rem;}
+    #wrap main .marshall_g .history_none {width:132px;}
+    /* -------------------------------------------- 7행 */
+    #wrap main .guide .content {padding:80px 64px;}
+    #wrap main .guide .content .title_swiper_btn {width:100%;}
+    #wrap main .guide .content .title_swiper_btn h2 {font-size:var(--t-title-l);}
+    #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev {left:92%;}
+    #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev,
+    #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next {width:23px; height:46px;}
+    #wrap main .guide .content .guide_swiper {width:100%;}
+    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {width:400px; margin-bottom:12px;}
+    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g h3 {font-size:1rem;}
+    /* -------------------------------------------- 8행 */
+    #wrap main .marsahall_about .content {width:100%;}
+    #wrap main .marsahall_about .content h2 {font-size:var(--t-title-l);}
+    #wrap main .marsahall_about .content * {font-size:1rem;}
+    /* -------------------------------------------- footer */
+    #wrap footer .content {padding:64px 50px; width:100%;}
+    #wrap footer .content .left {gap:16px;}
+    #wrap footer .content .left .auth_notice {font-size:var(--s-find);}
+    #wrap footer .content .left .detail * {font-size:var(--t-footer);; margin-bottom:6px;}
+    #wrap footer .content .right {gap:40px;}
+    footer .content .right h4 {margin-bottom:22px; font-size:var(--s-find);}
+    #wrap footer .content .right ul li {margin-bottom:12px;}
+    #wrap footer .content .right ul li a {font-size:var(--s-find);}
+}
+
+@media screen and (max-width:1330px) {
+    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {width:350px;}
+    #wrap main .marshall_contents .content .summary_g a {height:430px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:300px;}
+    #wrap main .marshall_g .record_history,
+    #wrap main .marshall_g .drums {height: 100%; padding:38px 0;}
+    #wrap main .marshall_g .history_none {width:100px; padding:22px 0; gap:10px; height: 100%;}
+    #wrap main .marshall_g {height:600px ;}
+}
+@media screen and (max-width:1158px) {
+    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {width:300px;}
+    /* -------------------------------------------- 5행 */
+    #wrap main .outdoors .content {padding:80px 00px; flex-flow:column nowrap;}
+    #wrap main .outdoors .content .outdoors_img {
+        position:relative; background-image:url(../images/t_outdoors_bg.png); width:100%; height:393px;}
+    #wrap main .outdoors .content .outdoors_img .more {bottom:34px; right:64px;}
+    #wrap main .outdoors .content .outdoors_product .outdoors_list {
+        padding:0 64px;
+        display:flex; row-gap: 15px; width:100%; height: 600px; gap:30px; overflow: hidden;}
+    #wrap main .outdoors .content .outdoors_product .outdoors_list li a .product_img {width:270px; height:248px;}
+
+}
+
+@media screen and (max-width:1024px) {
+    /* 상단 고정바 */
+    #wrap header .content {padding:12px 68px;}
+    #wrap header .content nav {display:none;}
+    #wrap header .content .logo {width:132px; height:34px;}
     /* 전체 메뉴 */
-    /* #wrap header .content .nav_right .menu_g {display:flex;}
+    #wrap header .content .nav_right .menu_g {display:flex;}
     #wrap header .content .nav_right .menu_g .menu {
         position:absolute; right:0px; top:58px; background:rgba(18, 18, 18, 0.86);
         height:0; opacity:0;
@@ -33,69 +147,49 @@
         display:flex; flex-flow:column nowrap; justify-content:center; align-items:flex-end;
     }
     #wrap header .content .nav_right .menu_g .menu ul {height:0; opacity:0;}
-    #wrap header .content .nav_right .menu_g .menu ul li a {color:var(--font-color);} */
+    #wrap header .content .nav_right .menu_g .menu ul li a {color:var(--font-color);}
+    /* 오른쪽 */
+    #wrap header .content .nav_right {gap:18px;}
+    #wrap header .content .nav_right > button {width:30px;}
+    #wrap header .content .nav_right > a {width:30px;}
+    #wrap header .content .nav_right .Language_btn {display:none;}
+    #wrap header .content .nav_right > a:nth-child(3) {width:32px;}
     /* -------------------------------------------- 히어로 */
+
     /* -------------------------------------------- 2행 */
-    #wrap main .marshall_contents {padding:0px; display:block; width:100%;}
-    #wrap main .marshall_contents .content {width:100%; padding:80px 64px;}
-    #wrap main .marshall_contents .content h2 {font-size:var(--t-title-l); margin-bottom:50px;}
-    #wrap main .marshall_contents .content .summary_g {width: 100%;}
-    #wrap main .marshall_contents .content .summary_g a {}
-    #wrap main .marshall_contents .content .summary_g h3 {}
-    #wrap main .marshall_contents .content .summary_g a > h3 {font-size:var(--nav-content); width:100%;}
-    #wrap main .marshall_contents .content .summary_g a > h3 > em {font-size:1rem;}
-    #wrap main .marshall_contents .content .summary_g .rock_sound,
-    #wrap main .marshall_contents .content .summary_g .heritage,
-    #wrap main .marshall_contents .content .summary_g .free_power {
-        background-size:cover; background-position:center;
+    #wrap main .marshall_contents .content .summary_g {width: 100%; gap:15px;}
+    #wrap main .marshall_contents .content .summary_g a {height:353px; width:268px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:224px;}
+    #wrap main .marshall_contents .content .summary_g a .arrow {width:32px; bottom:30px;}
+    #wrap main .marshall_contents .content .summary_g a .sound_summary {
+        font-size:var(--s-find);
+        -webkit-line-clamp:4;
+        -webkit-box-orient:vertical;
+        display:-webkit-box; overflow: hidden;
     }
     /* -------------------------------------------- 3행 */
-    #wrap main .best_item {padding:80px 0; display:block; width:100%;}
-    #wrap main .best_item .content {}
-    #wrap main .best_item .content .title_nav_more {padding:0 64px; margin-bottom:50px;}
-    #wrap main .best_item .content .title_nav_more h2 {font-size:var(--t-title-l);}
-    #wrap main .best_item .content .title_nav_more .best_nav * {font-size:1rem;}
-    #wrap main .best_item .content .title_nav_more .more_btn {width:47px; position:absolute; top:130%; left:64px;}
-    /* swiper */
-    #wrap main .best_item .best_swiper {}
-    #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap h3 {font-size:1rem;}
-    #wrap main .best_item .best_prev,
-    #wrap main .best_item .best_next {width:23px; height:46px;}
-    #wrap main .best_item .content .title_nav_more .swiper_btn .best_next {right:0%;}
-    #wrap main .best_item .content .title_nav_more .swiper_btn .best_prev {left:0%;}
-    #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .cart {display: block;}
-    #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .cart img {width:24px;}
-    #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .find {display:flex; font-size:var(--sub-font);}
+    #wrap main .best_item .content .title_nav_more .swiper_btn .best_prev {left:88%;}
     /* -------------------------------------------- 4행 */
-    #wrap main .room_item {padding:80px 0; gap:60px; width:100%;}
-    #wrap main .room_item .title_img {width:100%; height:306px;}
-    #wrap main .room_item .title_img .more {bottom:34px; right:64px;}
-    #wrap main .room_item .content .room_swiper { padding-bottom:36px; width:1500px;}
-    #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide {width:300px !important;}
-    #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product_img {width:300px; height:277px;}
-    #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .title_price h3 {font-size:1rem;}
-    #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .title_price .price {font-size:var(--sub-font);}
-    /* -------------------------------------------- 5행 */
-    #wrap main .outdoors .content {padding:80px 30px; display:flex; gap:30px;}
-    #wrap main .outdoors .content .outdoors_img {width:100%; height:600px;}
-    #wrap main .outdoors .content .outdoors_product .outdoors_list {width:608px; gap:14.5;}
-    #wrap main .outdoors .content .outdoors_product .outdoors_list li a .product_img {width:289px; height:267px;}
-    #wrap main .outdoors .content .outdoors_product .outdoors_list li a .title_price h3 {font-size:1rem;}
+    #wrap main .room_item .title_img {
+        background-image:url(../images/t_room_bg.png); width:100%; height:306px;
+        background-size:cover; position:relative;
+    }
+    
     /* -------------------------------------------- 6행 */
-    #wrap main .history {display: block;}
-    #wrap main .history .content {width:100%; padding:80px 64px;}
-    #wrap main .history .content .title {margin-bottom:50px;}
-    #wrap main .history .content .title h2 {font-size:var(--t-title-l);}
-    #wrap main .outdoors .content .outdoors_product .outdoors_list li .cart {display:block;}
-    /* -------------------------------------------- 7행 */
-    #wrap main .guide .content {padding:80px 64px;}
-    #wrap main .guide .content .title_swiper_btn {width:100%;}
-    #wrap main .guide .content .title_swiper_btn h2 {font-size:var(--t-title-l);}
-    #wrap main .guide .content .guide_swiper {width:100%;}
-    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {width:288px; margin-bottom:12px;}
-    /* -------------------------------------------- 8행 */
-    #wrap main .marsahall_about .content {width:100%;}
-    /* -------------------------------------------- footer */
-    #wrap footer .content {
-        padding:64px 50px; width:100%;}
+    #wrap main .marshall_g .record_history,
+    #wrap main .marshall_g .drums {}
+    #wrap main .marshall_g .history_none {width:100px; padding:22px 0; gap:10px;}
+    #wrap main .marshall_g .history_none .plus {width:28px;}
+    #wrap main .marshall_g {height:450px;}
+    #wrap .history .content .marshall_g .record_history h3 {width:282px;}
+    #wrap .history .content .marshall_g .record_history h3 img {width:100%;}
+    #wrap .history .content .marshall_g .drums h3 {width:209px;}
+    #wrap .history .content .marshall_g .drums h3 img {width:100%;}
+
+}
+
+@media screen and (max-width:998px) {
+    #wrap main .history .content .title .history_content {line-height:1.3em; text-align:center;}
+    #wrap main .history .content .title .history_content br {display:block;}
+    #wrap main .outdoors .content .outdoors_product .outdoors_list li a .product_img {width:230px;}
 }

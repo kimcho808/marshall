@@ -1,13 +1,14 @@
 :root {
     /* font_size */
     --title-l:2.125rem;
-    --nav-content:1.125rem;
+    --nav-content:1.125rem;/* 18 */
     --title-m:1.375rem;
-    --sub-font:0.875rem;
-    --s-find:0.75rem;
+    --sub-font:0.875rem;/* 14 */
+    --s-find:0.75rem;/* 12 */
     --title_mx:1.875rem;
     --t-title-l:1.75rem;
     --t-nav-title:1.375rem;
+    --t-footer:0.625rem;/* 10 */
 
     /* color */
     --main-color:#121212;

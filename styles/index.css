@@ -59,7 +59,10 @@
     gap:12px;
 }
 #wrap header .content .nav_right * {color:var(--font-color);}
-#wrap header .content .nav_right > a {display:block; width:24px;}
+#wrap header .content .nav_right > button {display:block; width:28px;}
+#wrap header .content .nav_right > a {display:block; width:28px;}
+#wrap header .content .nav_right > a:nth-child(3) {width:30px;}
+#wrap header .content .nav_right > button img {width:100%;}
 #wrap header .content .nav_right > a img {width:100%;}
 #wrap header .content .nav_right .menu_g {display:none;}
 #wrap header .content .nav_right .Language_btn {position:relative;}
@@ -81,6 +84,16 @@
 #wrap header .content .nav_right .Language_btn .Language_sub li {}
 #wrap header .content .nav_right .Language_btn .Language_sub li button {color:#666666;}
 #wrap header .content .nav_right .Language_btn .Language_sub li .active {font-weight:500; color:var(--font-color);}
+/* 검색창 디자인 */
+/* #wrap header .content .nav_right .search_g {
+    position:absolute; left:0; top: 58px; width:100%;
+    background:rgba(0, 0, 0, 0.7); padding:18px 0;
+    display:flex; justify-content:center;
+}
+#wrap header .content .nav_right .search_g .content {width:max-content;}
+#wrap header .content .nav_right .search_g .content #search {}
+#wrap header .content .nav_right .search_g .content #search #search_btn {}
+#wrap header .content .nav_right .search_g .content #search #search_btn img {width:24px;} */
 /* -------------------------------------------------------- 행 시작 */
 /* --------------- 히어로 */
 #wrap main {width: 100%;
@@ -190,9 +203,24 @@
 #wrap main .best_item .content .title_nav_more .best_nav {display:flex; gap:18px;}
 #wrap main .best_item .content .title_nav_more .best_nav * {font-size:var(--nav-content);}
 #wrap main .best_item .content .title_nav_more .best_nav .active {color:var(--point-color);}
+#wrap main .best_item .best_prev,
+#wrap main .best_item .best_next {
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    width:26px;
+    top:80%;
+}
+#wrap main .best_item .content .title_nav_more .swiper_btn .best_prev {
+    background-image:url(../images/prev.svg);
+    left:94%;
+}
+#wrap main .best_item .content .title_nav_more .swiper_btn .best_prev svg {display:none;}
+#wrap main .best_item .content .title_nav_more .swiper_btn .best_next svg {display:none;}
+#wrap main .best_item .content .title_nav_more .swiper_btn .best_next {background-image:url(../images/next.svg);}
 #wrap main .best_item .content .title_nav_more .more_btn {position:absolute; top:130%; left:0;}
 /* best swiper */
-#wrap main .best_item .best_swiper {max-width:1920px; padding: 44px 0;}
+#wrap main .best_item .best_swiper {width:100%; padding: 44px 0;}
 #wrap main .best_item .best_swiper .swiper-wrapper {}
 #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide {transform:scale(0.86); overflow:hidden;}
 #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide-active {transform:scale(1.1);}
@@ -215,23 +243,8 @@
     display:flex; align-items:center; gap:4px; display:none;
 }
 #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .find img {}
-#wrap main .best_item .best_prev,
-#wrap main .best_item .best_next {
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
-    width:26px;
-    top:80%;
-}
 #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g:hover .find {display: flex;}
 #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g:hover .cart {display: flex;}
-#wrap main .best_item .content .title_nav_more .swiper_btn .best_prev {
-    background-image:url(../images/prev.svg);
-    left:94%;
-}
-#wrap main .best_item .content .title_nav_more .swiper_btn .best_prev svg {display:none;}
-#wrap main .best_item .content .title_nav_more .swiper_btn .best_next svg {display:none;}
-#wrap main .best_item .content .title_nav_more .swiper_btn .best_next {background-image:url(../images/next.svg);}
 /* -------------------------------------------- 4행 */
 #wrap main .room_item {
     padding:120px 0; gap:60px;
@@ -240,8 +253,7 @@
     flex-flow:column nowrap; align-items:center;
 }
 #wrap main .room_item .title_img {
-    background-image:url(../images/room_back.png); width:1920px; height:405px;
-    background-position:center;
+    background-image:url(../images/room_back.png); width:100%; height:405px;
     background-size:cover; position:relative;
 }
 #wrap main .room_item .title_img .more {
@@ -337,7 +349,6 @@
 /* 마샬 레코드 */
 #wrap main .marshall_g {width:max-content; display:flex;}
 #wrap main .marshall_g * {color:var(--font-color-record); border-radius:10px;}
-#wrap main .marshall_g > div:nth-child(2) h3 {font-size:1.875rem;}
 #wrap main .marshall_g .record_history {background: #343434;}
 #wrap main .marshall_g .record_history h3 {}
 #wrap main .marshall_g .record_history h3 img {}
@@ -346,6 +357,7 @@
 #wrap main .marshall_g .record_history .content_arrow p:nth-child(2) {}
 #wrap main .marshall_g .record_history .content_arrow p:nth-child(2) img {}
 /* -------------------------- 공통 */
+#wrap main .marshall_g {width:100%;}
 #wrap main .marshall_g .marshall_content {
     font-size:var(--nav-content); line-height:1.4em; text-align:center;
 }
@@ -361,7 +373,7 @@
 }
 #wrap main .marshall_g .record_history,
 #wrap main .marshall_g .drums {
-    position: relative; overflow:hidden; width:1408px; height:645px;
+    position: relative; overflow:hidden; width:100%; height:645px;
     background-repeat:no-repeat; background-size:cover; background-position:center -20%;
     padding:80px 0; display:flex; flex-flow:column nowrap; justify-content:space-between; align-items:center;
 }
@@ -388,7 +400,7 @@
     content:''; display:block; position:absolute; left:0; top:0; width:100%; height:100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(197, 160, 89, 0.8) 300%);
 }
-#wrap main .marshall_g .history_none h3 {writing-mode: vertical-rl;}
+#wrap main .marshall_g .history_none h3 {writing-mode: vertical-rl; font-size:1.875rem;}
 #wrap main .marshall_g .history_none .plus {width:38px;}
 #wrap main .marshall_g .history_none .plus img {width:100%;}
 #wrap main .marshall_g li .drums,
@@ -431,7 +443,7 @@
 #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next {background-image:url(../images/next.svg);}
 #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next svg {display:none;}
 /* swiper */
-#wrap main .guide .content .guide_swiper {width:1920px;}
+#wrap main .guide .content .guide_swiper {width:100%;}
 #wrap main .guide .content .guide_swiper .swiper-wrapper {}
 #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide {}
 #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g {}
@@ -443,10 +455,11 @@
 /* -------------------------------------------- 8행 */
 #wrap main .marsahall_about {
     background:var(--main-color);
+    background-size:cover; background-position:center; background-repeat:no-repeat;
     display:flex; flex-flow:column nowrap; align-items:center;
 }
 #wrap main .marsahall_about .content {
-    width:1920px;
+    width:100%;
     background-image:url(../images/about.png);
     background-size:cover; background-position:center; background-repeat: no-repeat;
     display:flex; flex-flow:column nowrap; align-items:center; justify-content:center;
@@ -484,7 +497,7 @@
 #wrap footer .content .left .detail * {
     font-size:var(--s-find); margin-bottom:10px;
 }
-#wrap footer .content .left .detail p:nth-child {margin-bottom:0;}
+#wrap footer .content .left .detail p:nth-child(5) {margin-bottom:0;}
 #wrap footer .content .left .footer_copy {font-size:var(--s-find); font-weight:500;}
 /* 오른쪽 */
 #wrap footer .content .right {display:flex; gap:64px;}

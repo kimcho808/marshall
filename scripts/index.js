@@ -67,12 +67,16 @@ const best_swiper = new Swiper(bestSwiper,{
     },
 
     breakpoints: {
-        1024: {
-            slidesPerView: 4.5,
-            spaceBetween: 30,
-        },
-        402: {
+        402: { 
             slidesPerView: 2.5,
+            spaceBetween: 20,
+        },
+        1028: { 
+            slidesPerView: 3.5,
+            spaceBetween: 25,
+        },
+        1560: { 
+            slidesPerView: 4.5,
             spaceBetween: 30,
         },
     },
@@ -124,15 +128,15 @@ const room_swiper = new Swiper(roomSwiper,{
         el: '.swiper-scrollbar',
     },
     breakpoints: {
-        1024: {
-            slidesPerView: 4,
-            spaceBetween:29,
-        },
-        402: {
+        402: { 
             slidesPerView: 3,
             spaceBetween: 15,
         },
-    },
+        1560: { 
+            slidesPerView: 4,
+            spaceBetween: 29,
+        },
+    }
 })
 
 // outdoors
@@ -191,9 +195,9 @@ history_none.addEventListener('click', () => {
     record.style.transition = 'width 0.5s ease';
     drums.style.transition = 'width 0.5s ease';
 
-    if (record.style.width === '1408px' && drums.style.width === '0px') {
+    if (record.style.width === '100%' && drums.style.width === '0px') {
         record.style.width = '0';
-        drums.style.width = '1408px';
+        drums.style.width = '100%';
         drums_content.style.display = 'block';
         record_content.style.display = 'none';
         drums_arrow.style.display = 'block';
@@ -201,7 +205,7 @@ history_none.addEventListener('click', () => {
         historyH.textContent = 'MARSHALL RECORDS';
     } else {
         // 거짓(아니면) 원래대로 복구
-        record.style.width = '1408px';
+        record.style.width = '100%';
         drums.style.width = '0';
         drums_content.style.display = 'none';
         record_content.style.display = 'block';
@@ -244,7 +248,7 @@ const guideSwiper = new Swiper(guide_swiper,{
 const header = document.querySelector('header');
 
 window.addEventListener('scroll',()=>{
-    if(window.scrollY >= 800){
+    if(window.scrollY >= 200){
         header.classList.add('active');
     } else { header.classList.remove('active'); }
 })
