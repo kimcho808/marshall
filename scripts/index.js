@@ -128,7 +128,7 @@ const room_swiper = new Swiper(roomSwiper,{
         el: '.swiper-scrollbar',
     },
     breakpoints: {
-        402: { 
+        0: { 
             slidesPerView: 3,
             spaceBetween: 15,
         },
@@ -261,11 +261,32 @@ menuBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
 });
 
+const mainButtons = document.querySelectorAll('.menu > li > button');
+const subMenus = document.querySelectorAll('.menu > li > ul'); 
 
-//태블릿 서브메뉴
-const tMenu = document.querySelector('.menu_g .menu button');
-const tList = document.querySelector('.menu_g .menu ul')
+mainButtons.forEach((o, i) => {
+    o.addEventListener('click', () => {
+        // 클릭한 버튼 바로 다음에 있는 서브메뉴 찾기
+        const targetSub = o.nextElementSibling;
 
-tMenu.addEventListener('click',()=>{
-    tList.classList.toggle('active');
-})
+        // 1. 모든 버튼의 active 초기화
+        resetFunc(mainButtons);
+        // 2. 내가 클릭한 버튼에만 active 추가
+        o.classList.add('active'); 
+        
+        // 3. 모든 서브메뉴의 active 초기화
+        resetFunc(subMenus);
+        
+        // 4. 바로 다음 요소가 ul(서브메뉴)인 경우에만 active 추가
+        if (targetSub && targetSub.tagName === 'UL') {
+            targetSub.classList.add('active');
+        }
+    });
+});
+
+// 공통 리셋 함수
+function resetFunc(target){
+    for(let reset of target){
+        reset.classList.remove('active');
+    }
+}

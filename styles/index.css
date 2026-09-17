@@ -33,9 +33,10 @@
 #wrap header .content nav .main_nav > li > a {
     display:block;
     text-align:center;
-    font-size:var(--nav-content); padding:23px 0;
+    font-size:var(--nav-content); padding:23px 0; color:var(--font-color);
 }
-#wrap header .content nav .main_nav li a {color:var(--font-color);}
+#wrap header .content nav .main_nav li ul li a {color:#666666;}
+#wrap header .content nav .main_nav li ul li a:hover {color:var(--font-color);}
 #wrap header .content nav .main_nav > li > ul {
     display:flex;
     flex-flow:column nowrap;
@@ -48,11 +49,14 @@
     top: 56px;
     left:50%;
     transform:translateX(-50%);
-    height:0; overflow: hidden; opacity:0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
+    height:0; overflow: hidden; opacity:0; padding:18px;
+    transition: height 0.4s ease, opacity 0.4s ease;
 }
-#wrap header .content nav .main_nav > li > a:hover {color:var(--point-color);}
-#wrap header .content nav .main_nav > li:hover ul {height:max-content; opacity:1; padding:18px;}
+#wrap header .content nav .main_nav > li > .mian_n:hover {color:var(--point-color);}
+#wrap header .content nav .main_nav > li:hover .amp_sub {height:204px; opacity:1;}
+#wrap header .content nav .main_nav > li:hover .speaker_sub {height:204px; opacity:1;}
+#wrap header .content nav .main_nav > li:hover .headphone_sub {height:166px; opacity:1;}
+#wrap header .content nav .main_nav > li:hover .record_sub {height:128px; opacity:1;}
 /* 오른쪽 */
 #wrap header .content .nav_right {
     display:flex; justify-content:center; align-items:center;
@@ -64,6 +68,8 @@
 #wrap header .content .nav_right > a:nth-child(3) {width:30px;}
 #wrap header .content .nav_right > button img {width:100%;}
 #wrap header .content .nav_right > a img {width:100%;}
+#wrap header .content .nav_right .menu_g li ul.active {display:flex;}
+#wrap header .content .nav_right .menu_g li ul {display:none;}
 #wrap header .content .nav_right .menu_g {display:none;}
 #wrap header .content .nav_right .Language_btn {position:relative;}
 #wrap header .content .nav_right .Language_btn .Language {
