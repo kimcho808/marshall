@@ -67,7 +67,7 @@ const best_swiper = new Swiper(bestSwiper,{
     },
 
     breakpoints: {
-        402: { 
+        0: { 
             slidesPerView: 2.5,
             spaceBetween: 20,
         },
@@ -242,6 +242,20 @@ const guideSwiper = new Swiper(guide_swiper,{
         prevEl:'.guide_prev',
         nextEl:'.guide_next',
     },
+    breakpoints: {
+        0: { 
+            slidesPerView: 2.1,
+            spaceBetween: 12,
+        },
+        500: { 
+            slidesPerView: 2.8,
+            spaceBetween: 12,
+        },
+        622: { 
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    }
 })
 
 // header 스크롤 내리면 배경 색상 만들기

@@ -12,7 +12,7 @@
     #wrap main .marshall_contents {padding:0px; display:block; width:100%;}
     #wrap main .marshall_contents .content {width:100%; padding:80px 64px;}
     #wrap main .marshall_contents .content h2 {font-size:var(--t-title-l); margin-bottom:50px;}
-    #wrap main .marshall_contents .content .summary_g {width: 100%;}
+    #wrap main .marshall_contents .content .summary_g {width: 100%;};
     #wrap main .marshall_contents .content .summary_g a {height:550px;}
     #wrap main .marshall_contents .content .summary_g h3 {top:400px;}
     #wrap main .marshall_contents .content .summary_g a > h3 {font-size:var(--nav-content); width:100%;}
@@ -22,6 +22,7 @@
     #wrap main .marshall_contents .content .summary_g .free_power {
         background-size:cover; background-position:center;
     }
+    #wrap main .marshall_contents .content .summary_g a .sound_summary {font-size:var(--sub-fon); padding:0 15px;}
     #wrap main .marshall_contents .content .summary_g a:hover h3 {top: 30%;}
     /* -------------------------------------------- 3행 */
     #wrap main .best_item {padding:80px 0; display:block;}
@@ -63,9 +64,11 @@
     #wrap main .history .content .title {margin-bottom:50px;}
     #wrap main .history .content .title h2 {font-size:var(--t-title-l);}
     #wrap main .history .content .title .history_content {font-size:1rem;}
-    #wrap main .marshall_g .marshall_content {font-size:1rem;}
+    #wrap main .marshall_g .marshall_content {font-size:1rem; padding:0 15px;}
     #wrap main .marshall_g .history_none h3 {font-size:1.5rem;}
     #wrap main .marshall_g .history_none {width:132px;}
+    #wrap main .marshall_g .record_history .back_img {left:-8%;}
+    #wrap main .marshall_g .drums .back_img {left:-8%;}
     /* -------------------------------------------- 7행 */
     #wrap main .guide .content {padding:80px 64px;}
     #wrap main .guide .content .title_swiper_btn {width:100%;}
@@ -84,7 +87,7 @@
     #wrap footer .content {padding:64px 50px; width:100%;}
     #wrap footer .content .left {gap:16px;}
     #wrap footer .content .left .auth_notice {font-size:var(--s-find);}
-    #wrap footer .content .left .detail * {font-size:var(--t-footer);; margin-bottom:6px;}
+    #wrap footer .content .left .detail * {font-size:var(--t-footer); margin-bottom:6px;}
     #wrap footer .content .right {gap:40px;}
     footer .content .right h4 {margin-bottom:22px; font-size:var(--s-find);}
     #wrap footer .content .right ul li {margin-bottom:12px;}
@@ -98,8 +101,12 @@
     #wrap main .marshall_g .drums .back_img img {width:100%;}
     #wrap main .marshall_contents .content .summary_g a {height:430px;}
     #wrap main .marshall_contents .content .summary_g h3 {top:300px;}
+    #wrap main .marshall_contents .content .summary_g a .sound_summary {-webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; display:-webkit-box;}
     #wrap main .marshall_g .record_history,
     #wrap main .marshall_g .drums {height: 100%; padding:38px 0;}
+    #wrap main .marshall_g .record_history .back_img {left:-14%;}
+    #wrap main .marshall_g .drums .back_img {left:-4%;}
+    #wrap main .marshall_g .drums .back_img img {width:110%;}
     #wrap main .marshall_g .history_none {width:100px; padding:22px 0; gap:10px; height: 100%;}
     #wrap main .marshall_g {height:600px;}
     #wrap main .marsahall_about .content {padding:0 64px;}
@@ -107,6 +114,8 @@
 @media screen and (max-width:1158px) {
     #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {width:300px;}
     /* -------------------------------------------- 5행 */
+    #wrap main .marshall_g .record_history .back_img {left:-24%;}
+    #wrap main .marshall_g .drums .back_img {left:0%;}
     #wrap main .outdoors .content {padding:80px 0px; flex-flow:column nowrap;}
     #wrap main .outdoors .content .outdoors_img {
         position:relative; background-image:url(../images/t_outdoors_bg.png); width:100%; height:393px; top:0px;}
@@ -165,10 +174,8 @@
     #wrap main .marshall_contents .content .summary_g h3 {top:224px;}
     #wrap main .marshall_contents .content .summary_g a .arrow {width:32px; bottom:30px;}
     #wrap main .marshall_contents .content .summary_g a .sound_summary {
-        font-size:var(--s-find);
-        -webkit-line-clamp:4;
-        -webkit-box-orient:vertical;
-        display:-webkit-box; overflow: hidden;
+        font-size:var(--s-find); padding:0 15px;
+        display:-webkit-box;
     }
     /* -------------------------------------------- 3행 */
     #wrap main .best_item .content .title_nav_more .swiper_btn .best_prev {left:88%;}
@@ -190,6 +197,8 @@
     #wrap .history .content .marshall_g .record_history h3 img {width:100%;}
     #wrap .history .content .marshall_g .drums h3 {width:209px;}
     #wrap .history .content .marshall_g .drums h3 img {width:100%;}
+    #wrap main .marshall_g .record_history .back_img {left:-38%;}
+    #wrap main .marshall_g .drums .back_img {left:6%;}
     /* -------------------------------------------- 7행 */
     #wrap main .marsahall_about .content {padding:80px 15px;}
     #wrap main .marsahall_about .content .about_down {font-size:1rem;}
@@ -205,7 +214,10 @@
     #wrap main .outdoors .content .outdoors_product .outdoors_list li a .product_img {width:250px;}
 }
 
-@media screen and (max-width:938px) {#wrap main .outdoors .content .outdoors_product .outdoors_list li a .product_img {width:230px;}}
+@media screen and (max-width:938px) {
+    #wrap main .outdoors .content .outdoors_product .outdoors_list li a .product_img {width:230px;}
+    #wrap main .marshall_g .record_history .back_img {left:-54%;}
+}
 
 @media screen and (max-width:900px) {
     #wrap header .content {padding:10px 15px;}
@@ -254,6 +266,7 @@
     #wrap main .marshall_g .marshall_content {font-size:1rem;}
     #wrap main .marshall_g .history_none h3 {font-size:1.5rem;}
     #wrap main .marshall_g .history_none {width:132px;}
+    #wrap main .marshall_g .record_history .back_img {left:-60%;}
     /* -------------------------------------------- 7행 */
     #wrap main .guide .content {padding:44px 15px; gap:24;}
     #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev {left:86%;}
@@ -266,6 +279,10 @@
     #wrap footer .content .right h4 {margin-bottom:0;}
 }
 
+@media screen and (max-width:720px) {
+    #wrap main .marshall_g .marshall_content {-webkit-line-clamp:3 !important; -webkit-box-orient:vertical; overflow:hidden; display:-webkit-box;}
+}
+
 @media screen and (max-width:622px) {
     /* 오른쪽 */
     #wrap header .content .nav_right {gap:12px;}
@@ -274,20 +291,23 @@
     #wrap header .content .nav_right .menu_g .all_menu img {width:24px;}
     #wrap header .content .nav_right > a:nth-child(3) {width:26px;}
     /* -------------------------------------------- 2행 */
-    #wrap main .marshall_contents .content h2 {font-size:var(--nav-content); margin-bottom:24px;}
+    #wrap main .marshall_contents .content h2 {font-size:var(--sub-font); margin-bottom:28px;}
     #wrap main .marshall_contents .content .summary_g {width: 100%;}
     #wrap main .marshall_contents .content .summary_g a {height:220px;}
-    #wrap main .marshall_contents .content .summary_g h3 {top:150px; font-size:var(--t-footer) !important;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:150px; font-size:var(--t-footer) !important; text-align:center;}
+    #wrap main .marshall_contents .content .summary_g .sound_summary {font-size:var(--t-footer) !important;}
     #wrap main .marshall_contents .content .summary_g h3 br {display:flex; text-align:center;}
     #wrap main .marshall_contents .content .summary_g h3 em {display:none;}
     #wrap main .marshall_contents .content .summary_g a .arrow {width:14px; bottom:16px;}
     /* -------------------------------------------- 3행 */
     #wrap main .best_item .content .title_nav_more h2 {font-size:var(--nav-content); margin-bottom:8px;}
     #wrap main .best_item .content .title_nav_more .best_nav {gap:8px;}
+    #wrap main .best_item .content .title_nav_more {margin-bottom:24px;}
+    #wrap main .best_item .content .title_nav_more .more_btn {width:31px; height:6px;}
     #wrap main .best_item .content .title_nav_more .best_nav * {font-size:var(--s-find);}
     #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide-active {transform:scale(1.2); border-radius:10px 0 0 0;}
     #wrap main .best_item .content .title_nav_more .swiper_btn .best_prev,
-    #wrap main .best_item .content .title_nav_more .swiper_btn .best_next {width:14px !important; height:28px;}
+    #wrap main .best_item .content .title_nav_more .swiper_btn .best_next {width:14px !important; height:28px; top:50%;}
     #wrap main .best_item .content .title_nav_more .swiper_btn .best_prev {left:78%;}
     #wrap main .best_item .content .title_nav_more .more_btn {width:31px; height:6px;}
     #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide-active .product_img {margin-bottom:6px; border-radius:10px 0 0 0;}
@@ -296,8 +316,9 @@
     #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide .product_g .find {display:none;}
     /* -------------------------------------------- 4행 */
     #wrap main .room_item {gap:20px;}
+    #wrap main .room_item .title_img {background-image:url(../images/m_room_bg.png); width:100%; height:148px;}
     #wrap main .room_item .title_img .more {font-size:var(--m-sub); bottom:20px; right:15px;}
-    #wrap main .room_item .title_img .more img {background-image:url(../images/m_room_bg.png); width:6px; transform: translateY(0.5px);}
+    #wrap main .room_item .title_img .more img {width:6px; transform: translateY(0.5px);}
     #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide {width:150px !important;}
     #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .product_img {
         width:150px; height:142px;
@@ -307,7 +328,7 @@
     #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .title_price h3 {font-size:var(--t-footer);}
     #wrap main .room_item .content .room_swiper .swiper-wrapper .swiper-slide .product_g .product_wrap .title_price .price {font-size:var(--m-sub);}
     /* -------------------------------------------- 5행 */
-    #wrap main .outdoors .content .outdoors_img {background-image:url(../images/m_outdoors_bg.png); height:174px;}
+    #wrap main .outdoors .content .outdoors_img {background-image:url(../images/m_outdoors_bg.png); background-position:0 100%; height:174px;}
     #wrap main .outdoors .content .outdoors_img .more {font-size:var(--m-sub); bottom:15px; right:15px;}
     #wrap main .outdoors .content .outdoors_img .more img {width:6px; transform: translateY(0.5px);}
     #wrap main .outdoors .content .outdoors_product .outdoors_list {gap:12px; height:390px;}
@@ -317,10 +338,60 @@
     #wrap main .outdoors .content .outdoors_product .outdoors_list li a .title_price .price {font-size:var(--m-sub);}
     #wrap main .outdoors .content .outdoors_product .outdoors_list li .cart img {width:16px;}
     /* -------------------------------------------- 6행 */
+    #wrap main .marshall_g {height:350px;}
+    #wrap main .history .content .title {gap:6px; margin-bottom:24px;}
     #wrap main .history .content .title h2 {font-size:var(--m-nav-title);}
+    #wrap .history .content .marshall_g .record_history h3 {width:200px;}
+    #wrap .history .content .marshall_g .drums h3 {width:150px;}
+    #wrap main .marshall_g .history_none h3 {font-size:var(--nav-content);}
+    #wrap main .marshall_g .history_none {width:100px;}
+    #wrap main .marshall_g .content_arrow .marshall_content {font-size:var(--s-find);}
     #wrap main .history .content .title .history_content {font-size:var(--s-find); line-height:1.3em;}
     #wrap main .history .content .title .history_content br {display:block;}
+    #wrap main .marshall_g .content_arrow [class*="arrow"] {width:34px;}
+    #wrap main .marshall_g .content_arrow [class*="arrow"] img {width:100%;}
+    #wrap main .marshall_g .record_history .back_img {left:-94%;}
     /* -------------------------------------------- 7행 */
+    #wrap main .guide .content .title_swiper_btn {margin-bottom:24px;}
+    #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev,
+    #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next {width:14px !important; height:28px; top:50%;}
+    #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev {left:78%;}
     #wrap main .guide .content .title_swiper_btn h2 {font-size:var(--m-nav-title);margin-left:8px;}
-    #wrap main .guide .content .title_swiper_btn h2::after {width:20px; height:2px;}
+    #wrap main .guide .content .title_swiper_btn h2::after {width:2px; height:20px;}
+    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {width:174px; margin-bottom:4px;}
+    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g h3 {font-size:var(--t-footer);}
+    /* -------------------------------------------- 8행 */
+    #wrap main .marsahall_about .content h2 {font-size:var(--m-nav-title);}
+    #wrap main .marsahall_about .content {gap:20px; padding:40px 15px;}
+    #wrap main .marsahall_about .content * {font-size:var(--s-find); line-height:1.4em;}
+    #wrap main .marsahall_about .content .more {font-size:var(--m-sub);}
+    #wrap main .marsahall_about .content .more img {width:6px;}
+    /* -------------------------------------------- footer */
+    #wrap footer .content .left .auth_notice {font-size:var(--m-sub);}
+    #wrap footer .content .left .detail * {font-size:var(--m-sub); margin-bottom:4px;}
+    #wrap footer .content .left .footer_copy {font-size:var(--m-sub);}
+    #wrap footer .content .right {gap:10px;}
+    footer .content .right div h4 {font-size:var(--m-sub) !important;}
+}
+
+@media screen and (max-width:402px) {
+    #wrap main .marshall_contents .content .summary_g .sound_summary {line-height:1.3em; font-size:var(--t-footer);}
+    #wrap main .marshall_contents .content .summary_g a {height:141px;}
+    #wrap main .marshall_contents .content .summary_g a .arrow {width:12px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:70px;}
+    #wrap .history .content .marshall_g {height:200px;}
+    #wrap main .marshall_g .record_history,
+    #wrap main .marshall_g .drums {padding:16px 0px;}
+    #wrap .history .content .marshall_g .record_history h3 {width:130px;}
+    #wrap .history .content .marshall_g .drums h3 {width:118px;}
+    #wrap main .marshall_g .history_none h3 {font-size:var(--s-find);}
+    #wrap main .marshall_g .content_arrow {gap:8px;}
+    #wrap main .marshall_g .content_arrow [class*="arrow"] {width:16px;}
+    #wrap main .marshall_g .content_arrow .marshall_content {
+        font-size:var(--t-footer);
+    }
+    #wrap main .marshall_g .record_history .back_img {left:-150%;}
+    #wrap main .marshall_g .history_none .plus {width:14px;}
+    #wrap main .marshall_g .history_none {padding:10px 0; gap:2px; width:52px;}
+    #wrap main .marshall_g .drums .back_img {top:40%;}
 }
