@@ -130,7 +130,7 @@ const room_swiper = new Swiper(roomSwiper,{
     breakpoints: {
         0: { 
             slidesPerView: 3,
-            spaceBetween: 15,
+            spaceBetween: 12,
         },
         1560: { 
             slidesPerView: 4,

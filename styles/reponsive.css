@@ -307,7 +307,7 @@
     #wrap main .best_item .content .title_nav_more .best_nav * {font-size:var(--s-find);}
     #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide-active {transform:scale(1.2); border-radius:10px 0 0 0;}
     #wrap main .best_item .content .title_nav_more .swiper_btn .best_prev,
-    #wrap main .best_item .content .title_nav_more .swiper_btn .best_next {width:14px !important; height:28px; top:50%;}
+    #wrap main .best_item .content .title_nav_more .swiper_btn .best_next {width:14px !important; height:28px; top:100%;}
     #wrap main .best_item .content .title_nav_more .swiper_btn .best_prev {left:78%;}
     #wrap main .best_item .content .title_nav_more .more_btn {width:31px; height:6px;}
     #wrap main .best_item .best_swiper .swiper-wrapper .swiper-slide-active .product_img {margin-bottom:6px; border-radius:10px 0 0 0;}
@@ -354,7 +354,7 @@
     /* -------------------------------------------- 7행 */
     #wrap main .guide .content .title_swiper_btn {margin-bottom:24px;}
     #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev,
-    #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next {width:14px !important; height:28px; top:50%;}
+    #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next {width:14px !important; height:28px; top:100%;}
     #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev {left:78%;}
     #wrap main .guide .content .title_swiper_btn h2 {font-size:var(--m-nav-title);margin-left:8px;}
     #wrap main .guide .content .title_swiper_btn h2::after {width:2px; height:20px;}
