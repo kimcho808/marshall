@@ -67,8 +67,6 @@
     #wrap main .marshall_g .marshall_content {font-size:1rem; padding:0 15px;}
     #wrap main .marshall_g .history_none h3 {font-size:1.5rem;}
     #wrap main .marshall_g .history_none {width:132px;}
-    #wrap main .marshall_g .record_history .back_img {left:-8%;}
-    #wrap main .marshall_g .drums .back_img {left:-8%;}
     /* -------------------------------------------- 7행 */
     #wrap main .guide .content {padding:80px 64px;}
     #wrap main .guide .content .title_swiper_btn {width:100%;}
@@ -77,7 +75,7 @@
     #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev,
     #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_next {width:23px; height:46px;}
     #wrap main .guide .content .guide_swiper {width:100%;}
-    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {width:400px; margin-bottom:12px;}
+    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {margin-bottom:12px;}
     #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g h3 {font-size:1rem;}
     /* -------------------------------------------- 8행 */
     #wrap main .marsahall_about .content {width:100%;}
@@ -96,33 +94,28 @@
 
 @media screen and (max-width:1330px) {
     #wrap main .video_bg video {width:100%; height:600px; transform:scale(1.4); aspect-ratio:16/9;}
-    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {width:350px;}
-    #wrap main .marshall_g .drums .back_img {transform:scale(0.8);}
-    #wrap main .marshall_g .drums .back_img img {width:100%;}
+    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {}
     #wrap main .marshall_contents .content .summary_g a {height:430px;}
     #wrap main .marshall_contents .content .summary_g h3 {top:300px;}
     #wrap main .marshall_contents .content .summary_g a .sound_summary {-webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; display:-webkit-box;}
     #wrap main .marshall_g .record_history,
     #wrap main .marshall_g .drums {height: 100%; padding:38px 0;}
-    #wrap main .marshall_g .record_history .back_img {left:-14%;}
-    #wrap main .marshall_g .drums .back_img {left:-4%;}
-    #wrap main .marshall_g .drums .back_img img {width:110%;}
     #wrap main .marshall_g .history_none {width:100px; padding:22px 0; gap:10px; height: 100%;}
     #wrap main .marshall_g {height:600px;}
     #wrap main .marsahall_about .content {padding:0 64px;}
 }
 @media screen and (max-width:1158px) {
-    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {width:300px;}
+    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {}
     /* -------------------------------------------- 5행 */
-    #wrap main .marshall_g .record_history .back_img {left:-24%;}
-    #wrap main .marshall_g .drums .back_img {left:0%;}
+    #wrap main .marshall_g .record_history .back_img {}
+    #wrap main .marshall_g .drums .back_img {}
     #wrap main .outdoors .content {padding:80px 0px; flex-flow:column nowrap;}
     #wrap main .outdoors .content .outdoors_img {
         position:relative; background-image:url(../images/t_outdoors_bg.png); width:100%; height:393px; top:0px;}
     #wrap main .outdoors .content .outdoors_img .more {bottom:34px; right:64px;}
     #wrap main .outdoors .content .outdoors_product .outdoors_list {
-        padding:0 64px; margin:0 auto;
-        display:flex; row-gap: 15px; width:100%; height: 600px; gap:30px; overflow: hidden;}
+        padding:0 64px; justify-content: center;
+        display:flex; width:100%; height: 600px; gap:30px; overflow: hidden;}
     #wrap main .outdoors .content .outdoors_product .outdoors_list li a .product_img {width:270px; height:248px;}
 }
 
@@ -196,8 +189,8 @@
     #wrap .history .content .marshall_g .record_history h3 img {width:100%;}
     #wrap .history .content .marshall_g .drums h3 {width:209px;}
     #wrap .history .content .marshall_g .drums h3 img {width:100%;}
-    #wrap main .marshall_g .record_history .back_img {left:-38%;}
-    #wrap main .marshall_g .drums .back_img {left:6%;}
+    #wrap main .marshall_g .record_history .back_img {}
+    #wrap main .marshall_g .drums .back_img {}
     /* -------------------------------------------- 7행 */
     #wrap main .marsahall_about .content {padding:80px 15px;}
     #wrap main .marsahall_about .content .about_down {font-size:1rem;}
@@ -205,7 +198,7 @@
     #wrap main .marsahall_about .content span br {display:block;}
 }
 
-@media screen and (max-width:1018px) {#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {width:250px;}}
+@media screen and (max-width:1018px) {#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {/* width:250px; */}}
 
 @media screen and (max-width:998px) {
     #wrap main .history .content .title .history_content {line-height:1.3em; text-align:center;}
@@ -215,7 +208,7 @@
 
 @media screen and (max-width:938px) {
     #wrap main .outdoors .content .outdoors_product .outdoors_list li a .product_img {width:230px;}
-    #wrap main .marshall_g .record_history .back_img {left:-54%;}
+    #wrap main .marshall_g .record_history .back_img {}
 }
 
 @media screen and (max-width:900px) {
@@ -253,25 +246,18 @@
     #wrap main .room_item .content {width:100%; padding:0 15px;}
     #wrap main .room_item .content .room_swiper { padding-bottom:36px;}
     /* -------------------------------------------- 5행 */
-    #wrap main .outdoors .content {
-        padding: 44px 0;
-    }
-
+    #wrap main .outdoors .content {padding: 44px 0;}
     #wrap main .outdoors .content .outdoors_product .outdoors_list {
         padding: 0 15px;
         margin: 0 auto;
-
         display: flex;
         flex-flow: row wrap;
-
         width: 100%;
         height: 566px;
-
         gap: 15px;
         overflow: hidden;
         box-sizing: border-box;
     }
-
     #wrap main .outdoors .content .outdoors_product .outdoors_list li {
         flex: 0 0 calc((100% - 30px) / 3);
         box-sizing: border-box;
@@ -285,7 +271,7 @@
     #wrap main .marshall_g .marshall_content {font-size:1rem;}
     #wrap main .marshall_g .history_none h3 {font-size:1.5rem;}
     #wrap main .marshall_g .history_none {width:132px;}
-    #wrap main .marshall_g .record_history .back_img {left:-60%;}
+    #wrap main .marshall_g .record_history .back_img {}
     /* -------------------------------------------- 7행 */
     #wrap main .guide .content {padding:44px 15px; gap:24;}
     #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev {left:86%;}
@@ -304,6 +290,7 @@
 
 @media screen and (max-width:720px) {
     #wrap main .marshall_g .marshall_content {-webkit-line-clamp:3 !important; -webkit-box-orient:vertical; overflow:hidden; display:-webkit-box;}
+    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g h3 {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 }
 
 @media screen and (max-width:622px) {
@@ -373,7 +360,7 @@
     #wrap main .history .content .title .history_content br {display:block;}
     #wrap main .marshall_g .content_arrow [class*="arrow"] {width:34px;}
     #wrap main .marshall_g .content_arrow [class*="arrow"] img {width:100%;}
-    #wrap main .marshall_g .record_history .back_img {left:-94%;}
+    #wrap main .marshall_g .record_history .back_img {}
     /* -------------------------------------------- 7행 */
     #wrap main .guide .content .title_swiper_btn {margin-bottom:24px;}
     #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev,
@@ -381,7 +368,7 @@
     #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev {left:86%;}
     #wrap main .guide .content .title_swiper_btn h2 {font-size:var(--m-nav-title);margin-left:8px;}
     #wrap main .guide .content .title_swiper_btn h2::after {width:2px; height:20px;}
-    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {width:174px; margin-bottom:4px;}
+    #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {margin-bottom:4px;}
     #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g h3 {font-size:var(--t-footer);}
     /* -------------------------------------------- 8행 */
     #wrap main .marsahall_about .content h2 {font-size:var(--m-nav-title);}
@@ -415,8 +402,8 @@
     }
     #wrap main .best_item .content .title_nav_more .swiper_btn .best_prev {left:80%;}
     #wrap main .guide .content .title_swiper_btn .swiper_btn .guide_prev {left:80%;}
-    #wrap main .marshall_g .record_history .back_img {left:-150%;}
+    #wrap main .marshall_g .record_history .back_img {}
     #wrap main .marshall_g .history_none .plus {width:14px;}
     #wrap main .marshall_g .history_none {padding:10px 0; gap:2px; width:52px;}
-    #wrap main .marshall_g .drums .back_img {top:40%;}
+    #wrap main .marshall_g .drums .back_img {}
 }
