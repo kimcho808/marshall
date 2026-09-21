@@ -267,40 +267,22 @@ window.addEventListener('scroll',()=>{
     } else { header.classList.remove('active'); }
 })
 
-//태블릿 메뉴 누르면 나오기
-const menuBtn = document.querySelector('.all_menu');
-const menu = document.querySelector('.menu');
+// 햄버거 메뉴 누르면 나오기
+const $menuBtn = $('.all_menu');
+const $menu = $('.menu');
 
-menuBtn.addEventListener('click', () => {
-    menu.classList.toggle('active');
+$menuBtn.on('click', function () {
+    $menu.toggleClass('active');
 });
 
-const mainButtons = document.querySelectorAll('.menu > li > button');
-const subMenus = document.querySelectorAll('.menu > li > ul'); 
 
-mainButtons.forEach((o, i) => {
-    o.addEventListener('click', () => {
-        // 클릭한 버튼 바로 다음에 있는 서브메뉴 찾기
-        const targetSub = o.nextElementSibling;
+// 카테고리 누르면 서브메뉴 나오기
+const $mainMenu = $('.menu_g .menu > li > button');
 
-        // 1. 모든 버튼의 active 초기화
-        resetFunc(mainButtons);
-        // 2. 내가 클릭한 버튼에만 active 추가
-        o.classList.add('active'); 
-        
-        // 3. 모든 서브메뉴의 active 초기화
-        resetFunc(subMenus);
-        
-        // 4. 바로 다음 요소가 ul(서브메뉴)인 경우에만 active 추가
-        if (targetSub && targetSub.tagName === 'UL') {
-            targetSub.classList.add('active');
-        }
-    });
+$mainMenu.on('click', function () {
+    $mainMenu.removeClass('active');
+    $mainMenu.toggleClass('active');
+
+    $mainMenu.next('ul').stop().slideUp();
+    $(this).next('ul').stop().slideDown();
 });
-
-// 공통 리셋 함수
-function resetFunc(target){
-    for(let reset of target){
-        reset.classList.remove('active');
-    }
-}

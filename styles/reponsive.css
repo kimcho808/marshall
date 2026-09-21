@@ -150,7 +150,8 @@
     #wrap header .content .nav_right .menu_g .menu * {
         display:flex; flex-flow:column nowrap; justify-content:center; align-items:flex-end;
     }
-    #wrap header .content .nav_right .menu_g .menu ul {height:0; opacity:0;}
+    #wrap header .content .nav_right .menu_g .menu ul {gap:26px; display:none;}
+    #wrap header .content .nav_right .menu_g .menu ul li  {color:var(--font-color);}
     #wrap header .content .nav_right .menu_g .menu ul li a {color:var(--font-color);}
     /* 오른쪽 */
     #wrap header .content .nav_right {gap:18px;}
