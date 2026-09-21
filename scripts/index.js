@@ -275,14 +275,19 @@ $menuBtn.on('click', function () {
     $menu.toggleClass('active');
 });
 
-
 // 카테고리 누르면 서브메뉴 나오기
 const $mainMenu = $('.menu_g .menu > li > button');
+const $Menug = $('.menu_g .menu > li');
 
 $mainMenu.on('click', function () {
     $mainMenu.removeClass('active');
-    $mainMenu.toggleClass('active');
+    $(this).addClass('active');
+    $mainMenu.next('ul').stop(true, true).slideUp();
+    $(this).next('ul').stop(true, true).slideDown().css('height', '');
+});
 
-    $mainMenu.next('ul').stop().slideUp();
-    $(this).next('ul').stop().slideDown();
+//메인메뉴 누르면 색상 바뀌기
+$mainMenu.on('click', function(){
+    $Menug.removeClass('active');
+    $(this).parent().addClass('active');
 });

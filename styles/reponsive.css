@@ -1,6 +1,6 @@
 /* 반응형 디자인 */
 /* 태블릿 */
-@media screen and (max-width:1560px) {
+@media screen and (max-width:1579px) {
     /* 상단 고정바 */
     #wrap header .content {width:100%; padding:0px 68px;}
     #wrap header .content .logo a {display:block; width:132px; height:34px;}
@@ -14,7 +14,7 @@
     #wrap main .marshall_contents .content h2 {font-size:var(--t-title-l); margin-bottom:50px;}
     #wrap main .marshall_contents .content .summary_g {width: 100%;};
     #wrap main .marshall_contents .content .summary_g a {height:550px;}
-    #wrap main .marshall_contents .content .summary_g h3 {top:400px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:450px;}
     #wrap main .marshall_contents .content .summary_g a > h3 {font-size:var(--nav-content); width:100%;}
     #wrap main .marshall_contents .content .summary_g a > h3 > em {font-size:1rem;}
     #wrap main .marshall_contents .content .summary_g .rock_sound,
@@ -92,11 +92,16 @@
     #wrap footer .content .right ul li a {font-size:var(--s-find);}
 }
 
+@media screen and (max-width:1405px) {
+    #wrap main .marshall_contents .content .summary_g a {height:530px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:360px;}
+}
+
 @media screen and (max-width:1330px) {
     #wrap main .video_bg video {width:100%; height:600px; transform:scale(1.4); aspect-ratio:16/9;}
     #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {}
     #wrap main .marshall_contents .content .summary_g a {height:430px;}
-    #wrap main .marshall_contents .content .summary_g h3 {top:300px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:280px;}
     #wrap main .marshall_contents .content .summary_g a .sound_summary {-webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; display:-webkit-box;}
     #wrap main .marshall_g .record_history,
     #wrap main .marshall_g .drums {height: 100%; padding:38px 0;}
@@ -145,14 +150,17 @@
         content:''; display:block; position:absolute; right:-6px;
         background:#666; height:22px; width:2px;
     }
-    #wrap header .content .nav_right .menu_g .menu > li {margin-bottom:28px;}
+    #wrap header .content .nav_right .menu_g .menu > li {margin-bottom:28px; gap:20px;}
+    #wrap header .content .nav_right .menu_g .menu > li.active button {color:var(--point-color);}
+    #wrap header .content .nav_right .menu_g .menu > li.active button:after {background-color:var(--point-color);}
     #wrap header .content .nav_right .menu_g .menu > li:nth-child(5) {margin-bottom:0px;}
     #wrap header .content .nav_right .menu_g .menu * {
         display:flex; flex-flow:column nowrap; justify-content:center; align-items:flex-end;
     }
-    #wrap header .content .nav_right .menu_g .menu ul {gap:26px; display:none;}
-    #wrap header .content .nav_right .menu_g .menu ul li  {color:var(--font-color);}
-    #wrap header .content .nav_right .menu_g .menu ul li a {color:var(--font-color);}
+    #wrap header .content .nav_right .menu_g .menu ul {display: none; height:max-content;}
+    #wrap header .content .nav_right .menu_g .menu > li > ul li {margin-bottom: 26px;}
+    #wrap header .content .nav_right .menu_g .menu > li > ul li:last-child {margin-bottom: 0px;}
+    #wrap header .content .nav_right .menu_g .menu ul li a {color:var(--font-color); font-size:var(--nav-content);}
     /* 오른쪽 */
     #wrap header .content .nav_right {gap:18px;}
     #wrap header .content .nav_right > button {width:30px;}
@@ -199,6 +207,11 @@
     #wrap main .marsahall_about .content span br {display:block;}
 }
 
+@media screen and (max-width:1073px) {
+    #wrap main .marshall_contents .content .summary_g a {height:330px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:200px;}
+}
+
 @media screen and (max-width:1018px) {#wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {/* width:250px; */}}
 
 @media screen and (max-width:998px) {
@@ -224,7 +237,7 @@
     #wrap main .marshall_contents {padding:0px; display:block; width:100%;}
     #wrap main .marshall_contents .content {width:100%; padding:44px 15px;}
     #wrap main .marshall_contents .content .summary_g a {height:300px;}
-    #wrap main .marshall_contents .content .summary_g h3 {top:180px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:180px; font-size:1rem !important;}
     #wrap main .marshall_contents .content .summary_g a > h3 {font-size:var(--nav-content); width:100%;}
     #wrap main .marshall_contents .content .summary_g a > h3 > em {font-size:1rem;}
     #wrap main .marshall_contents .content .summary_g .rock_sound,
@@ -294,7 +307,18 @@
     #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g h3 {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 }
 
+@media screen and (max-width:692px) {
+    #wrap main .marshall_contents .content .summary_g a {height:250px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:140px; font-size:var(--sub-font) !important;}
+}
+
 @media screen and (max-width:622px) {
+    #wrap header .content .nav_right .menu_g .menu button {font-size:var(--m-nav-title); padding:8px 6px 8px 0;}
+    #wrap header .content .nav_right .menu_g .menu .outlet {font-size:var(--m-nav-title); padding:8px 6px 8px 0;}
+    #wrap header .content .nav_right .menu_g .menu > li {margin-bottom:22px;}
+    #wrap header .content .nav_right .menu_g .menu .outlet::after{height:20px;}
+    #wrap header .content .nav_right .menu_g .menu button::after {height:20px;}
+    #wrap header .content .nav_right .menu_g .menu ul li a {font-size:1rem;}
     /* 오른쪽 */
     #wrap header .content .nav_right {gap:12px;}
     #wrap header .content .nav_right > button {width:24px;}
@@ -303,16 +327,16 @@
     #wrap header .content .nav_right > a:nth-child(3) {width:26px;}
     /* -------------------------------------------- 2행 */
     #wrap main .marshall_contents .content h2 {font-size:var(--sub-font); margin-bottom:28px;}
-    #wrap main .marshall_contents .content .summary_g {width: 100%;}
+    #wrap main .marshall_contents .content .summary_g {width: 100%; gap:8px;}
     #wrap main .marshall_contents .content .summary_g a {height:220px;}
-    #wrap main .marshall_contents .content .summary_g h3 {top:150px; font-size:var(--t-footer) !important; text-align:center;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:145px; font-size:var(--s-find) !important; text-align:center;}
     #wrap main .marshall_contents .content .summary_g .sound_summary {font-size:var(--t-footer) !important;}
     #wrap main .marshall_contents .content .summary_g h3 br {display:flex; text-align:center;}
     #wrap main .marshall_contents .content .summary_g h3 em {display:none;}
     #wrap main .marshall_contents .content .summary_g a .arrow {width:14px; bottom:16px;}
     /* -------------------------------------------- 3행 */
     #wrap main .best_item .content .title_nav_more h2 {font-size:var(--nav-content); margin-bottom:8px;}
-    #wrap main .best_item .content .title_nav_more .best_nav {gap:8px;}
+    #wrap main .best_item .content .title_nav_more .best_nav {gap:12px;}
     #wrap main .best_item .content .title_nav_more {margin-bottom:24px;}
     #wrap main .best_item .content .title_nav_more .more_btn {width:31px; height:6px;}
     #wrap main .best_item .content .title_nav_more .best_nav * {font-size:var(--s-find);}
@@ -385,11 +409,18 @@
     footer .content .right div h4 {font-size:var(--m-sub) !important;}
 }
 
+@media screen and (max-width:480px) {
+    #wrap main .marshall_contents .content .summary_g a:hover h3 {display:none;}
+    #wrap main .marshall_contents .content .summary_g a {height:180px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:100px;}
+}
+
 @media screen and (max-width:402px) {
+        #wrap main .marshall_contents .content .summary_g h3 {font-size:var(--t-footer) !important;}
     #wrap main .marshall_contents .content .summary_g .sound_summary {line-height:1.3em; font-size:var(--t-footer);}
-    #wrap main .marshall_contents .content .summary_g a {height:141px;}
+    #wrap main .marshall_contents .content .summary_g a {height:150px;}
     #wrap main .marshall_contents .content .summary_g a .arrow {width:12px;}
-    #wrap main .marshall_contents .content .summary_g h3 {top:70px;}
+    #wrap main .marshall_contents .content .summary_g h3 {top:80px;}
     #wrap .history .content .marshall_g {height:200px;}
     #wrap main .marshall_g .record_history,
     #wrap main .marshall_g .drums {padding:16px 0px;}
