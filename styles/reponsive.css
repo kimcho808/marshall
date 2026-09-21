@@ -102,7 +102,10 @@
     #wrap main .guide .content .guide_swiper .swiper-wrapper .swiper-slide .guide_g .guide_img {}
     #wrap main .marshall_contents .content .summary_g a {height:430px;}
     #wrap main .marshall_contents .content .summary_g h3 {top:280px;}
-    #wrap main .marshall_contents .content .summary_g a .sound_summary {-webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; display:-webkit-box;}
+    #wrap main .marshall_contents .content .summary_g a .sound_summary {
+        -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; display:-webkit-box;
+        word-break:keep-all;
+    }
     #wrap main .marshall_g .record_history,
     #wrap main .marshall_g .drums {height: 100%; padding:38px 0;}
     #wrap main .marshall_g .history_none {width:100px; padding:22px 0; gap:10px; height: 100%;}

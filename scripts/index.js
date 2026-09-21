@@ -39,7 +39,7 @@ for(let i=0; i<10; i++){
 
     bestSlide.innerHTML = `
         <div class="product_g">
-            <a href="#" class="product_wrap">
+            <a href="../product.html" class="product_wrap">
                 <p class="product_img"><img src="${bestdb[i].product}" alt=""></img></p>
                 <h3>${bestdb[i].title}</h3>
             </a>
@@ -107,7 +107,7 @@ for(let i=0; i<6; i++){
 
     roomSlide.innerHTML = `
         <div class="product_g">
-            <a href="#" class="product_wrap">
+            <a href="../product.html" class="product_wrap">
                 <p class="product_img"><img src="${roomdb[i].product}" alt=""></img></p>
                 <div class="title_price">
                     <h3>${roomdb[i].title}</h3>
@@ -147,7 +147,7 @@ for(let i=0; i<8; i++){
     const outdoorsLi = document.createElement('li');
 
     outdoorsLi.innerHTML = `
-        <a href="">
+        <a href="../product.html">
             <p class="product_img"><img src="${outdoorsdb[i].product}" alt=""></p>
             <div class="title_price">
                 <h3>${outdoorsdb[i].title}</h3>
@@ -198,17 +198,15 @@ history_none.addEventListener('click', () => {
     if (record.style.width === '100%' && drums.style.width === '0px') {
         record.style.width = '0';
         drums.style.width = '100%';
-        drums_content.style.display = 'block';
-        record_content.style.display = 'none';
+
         drums_arrow.style.display = 'block';
         record_arrow.style.display = 'none';
         historyH.textContent = 'MARSHALL RECORDS';
+
     } else {
-        // 거짓(아니면) 원래대로 복구
         record.style.width = '100%';
         drums.style.width = '0';
-        drums_content.style.display = 'none';
-        record_content.style.display = 'block';
+
         drums_arrow.style.display = 'none';
         record_arrow.style.display = 'block';
         historyH.textContent = 'NATAL DRUMS';
