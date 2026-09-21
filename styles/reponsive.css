@@ -446,3 +446,8 @@
     #wrap main .marshall_g .history_none {padding:10px 0; gap:2px; width:52px;}
     #wrap main .marshall_g .drums .back_img {}
 }
+@media screen and (max-width:401px) {
+    #wrap main .outdoors .content .outdoors_product .outdoors_list {height:360px;}
+    #wrap main .outdoors .content .outdoors_product .outdoors_list li a .product_img {
+    width:166px; height:156px;}
+}

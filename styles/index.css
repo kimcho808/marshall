@@ -367,6 +367,7 @@
 /* -------------------------- 공통 */
 #wrap main .marshall_g {width:100%;}
 #wrap main .marshall_g .marshall_content {
+    /* white-space: nowrap; */
     font-size:var(--nav-content); line-height:1.4em; text-align:center;
 }
 #wrap main .marshall_g .record_history .back_img img,
