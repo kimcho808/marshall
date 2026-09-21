@@ -168,7 +168,10 @@
     #wrap header .content .nav_right .Language_btn {display:none;}
     #wrap header .content .nav_right > a:nth-child(3) {width:32px;}
     /* -------------------------------------------- 히어로 */
-
+    #wrap main .video_bg {display:none;}
+    #wrap main .img_t_hero {display:block;}
+    #wrap main .img_t_hero {width:100%;}
+    #wrap main .img_t_hero img {width:100%; display: block;}
     /* -------------------------------------------- 2행 */
     #wrap main .marshall_contents .content .summary_g {width: 100%; gap:15px;}
     #wrap main .marshall_contents .content .summary_g a {height:353px; width:268px;}
@@ -416,7 +419,11 @@
 }
 
 @media screen and (max-width:402px) {
-        #wrap main .marshall_contents .content .summary_g h3 {font-size:var(--t-footer) !important;}
+    #wrap main .img_t_hero {display:none;}
+    #wrap main .img_m_hero {display:block;}
+    #wrap main .img_m_hero {width:100%;}
+    #wrap main .img_m_hero img {width:100%; display: block;}
+    #wrap main .marshall_contents .content .summary_g h3 {font-size:var(--t-footer) !important;}
     #wrap main .marshall_contents .content .summary_g .sound_summary {line-height:1.3em; font-size:var(--t-footer);}
     #wrap main .marshall_contents .content .summary_g a {height:150px;}
     #wrap main .marshall_contents .content .summary_g a .arrow {width:12px;}

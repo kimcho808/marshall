@@ -108,6 +108,8 @@
     line-height: 0;}
 #wrap main .video_bg {width:100%; overflow: hidden;}
 #wrap main .video_bg video {width:100%; height:100vh; transform:scale(1.28);}
+#wrap main .img_t_hero {display:none;}
+#wrap main .img_m_hero {display:none;}
 /* -------------------------------------------- 2행 */
 #wrap main .marshall_contents {
     display:flex;
