@@ -91,15 +91,23 @@
 #wrap header .content .nav_right .Language_btn .Language_sub li button {color:#666666;}
 #wrap header .content .nav_right .Language_btn .Language_sub li .active {font-weight:500; color:var(--font-color);}
 /* 검색창 디자인 */
-/* #wrap header .content .nav_right .search_g {
-    position:absolute; left:0; top: 58px; width:100%;
+#wrap header .content .nav_right .search_g {}
+#wrap header .content .nav_right .search_g {
+    position:absolute; left:0; top: 64px; width:100%;
     background:rgba(0, 0, 0, 0.7); padding:18px 0;
     display:flex; justify-content:center;
+    display:none;
 }
-#wrap header .content .nav_right .search_g .content {width:max-content;}
-#wrap header .content .nav_right .search_g .content #search {}
-#wrap header .content .nav_right .search_g .content #search #search_btn {}
-#wrap header .content .nav_right .search_g .content #search #search_btn img {width:24px;} */
+#wrap header .content .nav_right .search_g .content {
+    width:max-content; padding:8px 12px;
+    border-bottom:1px solid #ddd;
+}
+#wrap header .content .nav_right .search_g .content #search {
+    margin-right:10px; background:transparent;
+    display:block; width:330px;
+}
+#wrap header .content .nav_right .search_g .content #search_btn {}
+#wrap header .content .nav_right .search_g .content #search_btn img {width:24px;}
 /* -------------------------------------------------------- 행 시작 */
 /* --------------- 히어로 */
 #wrap main {width: 100%;
@@ -310,7 +318,7 @@
 #wrap main .outdoors {background:var(--main-color);}
 #wrap main .outdoors .content {padding:120px 30px; display:flex; gap:30px;}
 #wrap main .outdoors .content .outdoors_img {
-    position:sticky; left:0; top:50px;
+    position:sticky; left:0; top:64px;
     background-image:url(../images/outdoors.png); width:1134px; height:728px;
     background-size:cover;
 }

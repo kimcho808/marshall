@@ -199,16 +199,18 @@ history_none.addEventListener('click', () => {
         record.style.width = '0';
         drums.style.width = '100%';
 
-        drums_arrow.style.display = 'block';
-        record_arrow.style.display = 'none';
+        record.querySelector('.marshall_content').style.whiteSpace = 'nowrap';
+        drums.querySelector('.marshall_content').style.whiteSpace = '';
+
         historyH.textContent = 'MARSHALL RECORDS';
 
     } else {
         record.style.width = '100%';
         drums.style.width = '0';
 
-        drums_arrow.style.display = 'none';
-        record_arrow.style.display = 'block';
+        record.querySelector('.marshall_content').style.whiteSpace = '';
+        drums.querySelector('.marshall_content').style.whiteSpace = 'nowrap';
+
         historyH.textContent = 'NATAL DRUMS';
     }
 });
@@ -288,4 +290,26 @@ $mainMenu.on('click', function () {
 $mainMenu.on('click', function(){
     $Menug.removeClass('active');
     $(this).parent().addClass('active');
+});
+
+//검색창 띄우기
+const search = document.querySelector('.search_g');
+const searchBtn = document.querySelector('.nav_right > button');
+
+searchBtn.addEventListener('click', () => {
+
+    if(search.style.display == 'none' || search.style.display == '') {
+
+        search.style.display = 'flex';
+        header.classList.add('active');
+    } else {
+
+        search.style.display = 'none';
+
+        if(window.scrollY >= 200) {
+            header.classList.add('active');
+        } else {
+            header.classList.remove('active');
+        }
+    }
 });

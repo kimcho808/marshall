@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Marshall | Acton III</title>
+    <!-- 제이쿼리 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--swiper 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--swiper 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <!-- CSS, JS -->
+    <link rel="shortcut icon" href="./images/marshall_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css"><!-- 리셋 -->
+    <link rel="stylesheet" href="./styles/var.css"><!-- 바 -->
+    <link rel="stylesheet" href="./styles/product.css"><!-- 전체 디자인 -->
+    <link rel="stylesheet" href="./"><!-- 반응형 디자인 -->
+    <script src="./scripts/marsall_db.js" defer></script>
+    <script src="./scripts/product.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 상단 고정 바 -->
+        <header>
+            <div class="content">
+                <h1 class="logo"><a href="./index.html"><img src="./images/logo.png" alt="마샬"></a></h1>
+                <nav>
+                    <ul class="main_nav">
+                        <li><a href="#" class="amp mian_n">AMP</a>
+                            <ul class="amp_sub">
+                                <li><a href="#">모든 앰프</a></li>
+                                <li><a href="#">헤드</a></li>
+                                <li><a href="#">콤보</a></li>
+                                <li><a href="#">케비넷</a></li>
+                                <li><a href="#">페달</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="speaker mian_n">SPEAKER</a>
+                            <ul class="speaker_sub">
+                                <li><a href="#">모든 스피커</a></li>
+                                <li><a href="#">홈</a></li>
+                                <li><a href="#">휴대용</a></li>
+                                <li><a href="#">TV사운드</a></li>
+                                <li><a href="#">파티</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="headphone mian_n">HEADPHONE</a>
+                            <ul class="headphone_sub">
+                                <li><a href="#">모든 헤드</a></li>
+                                <li><a href="#">이어버드</a></li>
+                                <li><a href="#">온이어</a></li>
+                                <li><a href="#">오버이어</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="record mian_n">RECORD</a>
+                            <ul class="record_sub">
+                                <li><a href="#">레이블</a></li>
+                                <li><a href="#">앨범</a></li>
+                                <li><a href="#">아티스트</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="outlet mian_n">OUTLET</a></li>
+                    </ul>
+                </nav><!-- e:nav -->
+                <div class="nav_right">
+                    <button type="button" id="search_b"><img src="./images/search.svg" alt="검색하기"></button>
+                    <!-- 검색하기 레이어 -->
+                    <div class="search_g">
+                        <div class="content">
+                            <input type="text" id="search" placeholder="당신의 플레이리스트를 깨울 사운드를 찾아보세요.">
+                            <button type="button" id="search_btn"><img src="./images/search.svg" alt="검색하기"></button>
+                        </div>
+                    </div>
+                    <a href="#"><img src="./images/shopping.svg" alt="장바구니"></a>
+                    <a href="#"><img src="./images/mypage.svg" alt="마이페이지"></a>
+                    <div class="menu_g">
+                        <button type="button" class="all_menu"><img src="./images/menu.svg" alt="전체 메뉴"></button>
+                        <ul class="menu">
+                            <li><button type="button" class="amp">AMP</button>
+                                <ul class="amp_sub">
+                                    <li><a href="#">모든 앰프</a></li>
+                                    <li><a href="#">헤드</a></li>
+                                    <li><a href="#">콤보</a></li>
+                                    <li><a href="#">케비넷</a></li>
+                                    <li><a href="#">페달</a></li>
+                                </ul>
+                            </li>
+                            <li><button type="button" class="speaker">SPEAKER</button>
+                                <ul class="speaker_sub">
+                                    <li><a href="#">모든 스피커</a></li>
+                                    <li><a href="#">홈</a></li>
+                                    <li><a href="#">휴대용</a></li>
+                                    <li><a href="#">TV사운드</a></li>
+                                    <li><a href="#">파티</a></li>
+                                </ul>
+                            </li>
+                            <li><button type="button" class="headphone">HEADPHONE</button>
+                                <ul class="headphone_sub">
+                                    <li><a href="#">모든 헤드</a></li>
+                                    <li><a href="#">이어버드</a></li>
+                                    <li><a href="#">온이어</a></li>
+                                    <li><a href="#">오버이어</a></li>
+                                </ul>
+                            </li>
+                            <li><button type="button" class="record">RECORD</button>
+                                <ul class="record_sub">
+                                    <li><a href="#">레이블</a></li>
+                                    <li><a href="#">앨범</a></li>
+                                    <li><a href="#">아티스트</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="outlet">OUTLET</a></li>
+                        </ul>
+                    </div>
+                    <div class="Language_btn">
+                        <button type="button" class="Language">KO<p><img src="./images/arrow_down.svg" alt=""></p></button>
+                        <ul class="Language_sub">
+                            <li><button type="button" class="active">한국어</button></li>
+                            <li><button type="button">日本語</button></li>
+                            <li><button type="button">English</button></li>
+                            <li><button type="button">Español</button></li>
+                            <li><button type="button">Deutsch</button></li>
+                            <li><button type="button">Français</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ---------------------------------------------------------- 메인 시작 -->
+        <main>
+            <section class="product_wrap">
+                <div class="content">
+                    <div class="product_img_g">
+                        <div class="img_g">
+                            <ul class="small_img">
+                                <li><button type="button"><img src="./images/product_img_1.png" alt=""></button></li>
+                                <li><button type="button"><img src="./images/product_img_2.png" alt=""></button></li>
+                                <li><button type="button"><img src="./images/product_img_3.png" alt=""></button></li>
+                                <li><button type="button"><img src="./images/product_img_4.png" alt=""></button></li>
+                                <li><button type="button"><img src="./images/product_img_5.png" alt=""></button></li>
+                            </ul>
+                            <div class="big_img"><img src="./images/product_img_1.png" alt=""></div>
+                        </div>
+                        <div class="product_summary">
+                            <p class="img_summary"><img src="" alt=""></p>
+                            <button type="button">더보기<img src="./images/light_arrow.svg" alt=""></button>
+                        </div>
+                    </div><!-- e:product_img_g -->
+                    <div class="purchase_item">
+                        <p>HOME • SPEAKER • Acton III</p>
+                        <div class="summary_wrap">
+                            <div class="title_wrap">
+                                <div class="title_price">
+                                    <h1 class="title">Acton III</h1>
+                                    <p class="price">₩ 460,000</p>
+                                </div>
+                                <div class="cart"><img src="./images/shopping.svg" alt="장바구니"></div>
+                            </div><!-- e:title_wrap -->
+                            <div class="installment_shipping">
+                                <p>3개월  무이자 할부 시 월 ₩ 153,300</p>
+                                <p>배송 기간 : 3-6 영업일 이내</p>
+                            </div>
+                            <p class="summary">한 손에 쏙 들어올 만큼 컴팩트한 크기임에도, 공간을 가득 채우는 풍부하고 웅장한 사운드를 선사합니다. 복잡한 설정 없이 블루투스로 간편하게 연결해 언제 어디서나 쉽게 음악을 즐길 수 있으며, 마샬 특유의 빈티지한 감성과 시그니처 디자인을 고스란히  담아내어 인테리어 소품으로도 큰 인기를 끌고 있습니다.</p>
+                        </div><!-- e:summary_wrap -->
+                        <div class="color_g">
+                            <p>Color</p>
+                            <ul class="color_wrap">
+                                <li>
+                                    <button type="button" class="color_img"><img src="./images/color_1.png" alt=""></button>
+                                    <p class="color_name">Black</p>
+                                </li>
+                                <li class="active">
+                                    <button type="button" class="color_img"><img src="./images/color_2.png" alt=""></button>
+                                    <p class="color_name">Brown</p>
+                                </li>
+                                <li>
+                                    <button type="button" class="color_img"><img src="./images/color_3.png" alt=""></button>
+                                    <p class="color_name">Burgundy</p>
+                                </li>
+                                <li>
+                                    <button type="button" class="color_img"><img src="./images/color_4.png" alt=""></button>
+                                    <p class="color_name">Cream</p>
+                                </li>
+                                <li>
+                                    <button type="button" class="color_img"><img src="./images/color_5.png" alt=""></button>
+                                    <p class="color_name">Midnight Blue</p>
+                                </li>
+                            </ul>
+                        </div><!-- e:color_g -->
+                        <div class="number_purchase">
+                            <div class="number">
+                                <button type="button" id="minus"><img src="./images/minus.svg" alt="수량 빼기"></button>
+                                <p>1</p>
+                                <button type="button" id="plus"><img src="./images/plus_product.svg" alt="수량 더하기"></button>
+                            </div>
+                            <button type="button" id="purchase">구매하기</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="details">
+                <div class="content">
+                    <button type="button">제품 세부 정보<img src="./images/arrow_down.svg" alt=""></button>
+                    <button type="button">자주 묻는 질문<img src="./images/arrow_down.svg" alt=""></button>
+                </div>
+            </section>
+            <section class="related_products">
+                <div class="content">
+                    <div class="title_swiper_btn">
+                        <h2>RELATED PRODUCTS</h2>
+                        <div class="swiper_btn">
+                            <div class="swiper-button-prev guide_prev"></div>
+                            <div class="swiper-button-next guide_next"></div>
+                        </div>
+                    </div>
+                    <div class="swiper related">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
