@@ -39,7 +39,7 @@ for(let i=0; i<10; i++){
 
     bestSlide.innerHTML = `
         <div class="product_g">
-            <a href="../product.html" class="product_wrap">
+            <a href="./product.html" class="product_wrap">
                 <p class="product_img"><img src="${bestdb[i].product}" alt=""></img></p>
                 <h3>${bestdb[i].title}</h3>
             </a>
@@ -107,7 +107,7 @@ for(let i=0; i<6; i++){
 
     roomSlide.innerHTML = `
         <div class="product_g">
-            <a href="../product.html" class="product_wrap">
+            <a href="./product.html" class="product_wrap">
                 <p class="product_img"><img src="${roomdb[i].product}" alt=""></img></p>
                 <div class="title_price">
                     <h3>${roomdb[i].title}</h3>
@@ -147,7 +147,7 @@ for(let i=0; i<8; i++){
     const outdoorsLi = document.createElement('li');
 
     outdoorsLi.innerHTML = `
-        <a href="../product.html">
+        <a href="./product.html">
             <p class="product_img"><img src="${outdoorsdb[i].product}" alt=""></p>
             <div class="title_price">
                 <h3>${outdoorsdb[i].title}</h3>
