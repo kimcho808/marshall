@@ -184,3 +184,10 @@ main .product_wrap .content .purchase_item .color_g .color_wrap li .color_name {
     background:#eee; border-radius:12px 0 0 0; width:100%;
     color:#121212; padding:18px 0; font-weight:500; font-size:var(--nav-content);
 }
+/* ---------------------------------------------------------- 세부정보 */
+#wrap main .details {background-color:var(--main-color); display:flex; justify-content:center;}
+#wrap main .details .content {width:var(--content-width);}
+#wrap main .details .content > * {
+    color:var(--font-color);
+    display:flex;
+}
