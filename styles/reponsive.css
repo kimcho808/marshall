@@ -2,7 +2,7 @@
 /* 태블릿 */
 @media screen and (max-width:1579px) {
     /* 상단 고정바 */
-    #wrap header .content {width:100%; padding:0px 68px;}
+    #wrap header .content {width:100%; padding:0px 64px;}
     #wrap header .content .logo a {display:block; width:132px; height:34px;}
     #wrap header .content .logo a img {width:100%;}
     #wrap header .content nav .main_nav > li > a {padding:20px 0;}

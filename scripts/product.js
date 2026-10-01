@@ -29,6 +29,15 @@ const related_swiper = new Swiper(related,{
         prevEl:'.related_prev',
         nextEl:'.related_next',
     },
+    breakpoints:{
+        0: { 
+            slidesPerView: 3.5,
+            spaceBetween: 15,
+        },
+        1560: { 
+            slidesPerView: 4,
+            spaceBetween: 29,
+        },}
 })
 
 const Language = document.querySelector('.Language');
@@ -50,3 +59,18 @@ Language.addEventListener('click',()=>{
         Language_sub.style.display = 'flex';
     } else {Language_sub.style.display = 'none';}
 })
+
+//색상 클릭 이벤트
+const color = document.querySelectorAll('.color_g li');
+
+for(let c of color){ 
+    c.addEventListener('click', ()=>{
+        for(let c of color){
+            c.classList.remove('active');
+        }
+        c.classList.add('active');
+    });
+}
+
+//상세페이지 더보기 버튼
+const moreBtn = document.querySelector('.product_summary .more');
