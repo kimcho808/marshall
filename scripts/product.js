@@ -31,10 +31,14 @@ const related_swiper = new Swiper(related,{
     },
     breakpoints:{
         0: { 
-            slidesPerView: 3.5,
+            slidesPerView: 2.5,
             spaceBetween: 15,
         },
-        1560: { 
+        903: { 
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        1267: { 
             slidesPerView: 4,
             spaceBetween: 29,
         },}
